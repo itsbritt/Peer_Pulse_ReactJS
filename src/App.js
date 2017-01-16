@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-//
-// import { Button, Col } from 'react-bootstrap';
+
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 
@@ -43,6 +42,13 @@ class App extends Component {
       '';
 
     return (
+
+      <Col xs={12} md={12}>
+      <div className="App">
+        <div className="App-header">
+
+          <h2>Welcome to React</h2>
+
       <div className="container">
         { this.sessionButton() }
         <h1>Peer-Pulse</h1>
@@ -51,8 +57,10 @@ class App extends Component {
 
         <div className="content">
           { this.props.children}
+
         </div>
       </div>
+    </Col>
     );
   }
 }
