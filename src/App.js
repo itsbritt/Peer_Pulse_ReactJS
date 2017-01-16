@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 
 
-import { Button, Col } from 'react-bootstrap';
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 
@@ -39,7 +38,7 @@ class App extends Component {
 
   render() {
     const welcomeMessage = (firebase.auth().currentUser) ?
-      <h4>Welcome { this.state.user.displayName }!</h4> :
+      <h4>Hi { this.state.user.displayName }!</h4> :
       '';
 
     return (
@@ -52,7 +51,7 @@ class App extends Component {
 
       <div className="container">
         { this.sessionButton() }
-        <h1>Peer Pulse</h1>
+        <h1>Peer-Pulse</h1>
         { welcomeMessage }
 
 
