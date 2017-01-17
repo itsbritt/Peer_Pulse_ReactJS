@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
-
+import { Button, Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
-
+import { Link } from 'react-router';
 
 class Home extends Component {
   constructor(props) {
@@ -41,10 +41,18 @@ class Home extends Component {
 
     return (
       <div className="background">
+      <Col xs={1}/>
+      <Col xs={10} className="centeredContainer">
+      <div>
         { this.sessionButton() }
-        <h1 className="header">Peer-Pulse</h1>
-        { welcomeMessage }
+        <h1 className="header">{ welcomeMessage }</h1>
       </div>
+      <Button className="btn btn-primary" id="landingButton">
+        <Link to="/add"><h2 className="header">new project</h2></Link>
+      </Button>
+    </Col>
+      <Col xs={1}/>
+    </div>
     );
   }
 }
