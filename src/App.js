@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import Home from './components/Home';
-import { Button } from 'react-bootstrap';
+import { Button, Col } from 'react-bootstrap';
 import { Link } from 'react-router';
+import Background from '../images/logo.png';
 
 import {firebase} from './utils/firebase';
 
@@ -16,12 +17,17 @@ class App extends Component {
 
     return (
       <div className="background">
-        <h1 className="header">Peer-Pulse</h1>
-        <div>
-          <Button>
+
+          <Col xs={1}/>
+          <Col xs={10} className="centeredContainer">
+          <img src={ Background } className="logoImage"/>
+          <h1 className="pageHeader">PeerPulse</h1>
+          <h4>The smarter way to share ideas</h4>
+          <Button className="landingButton">
             <Link to="/home"><h2>get started</h2></Link>
           </Button>
-        </div>
+        </Col>
+        <Col xs={1}/>
       </div>
     );
   }
