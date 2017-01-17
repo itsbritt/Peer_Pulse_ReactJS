@@ -7,7 +7,9 @@ class LoginButton extends Component {
     e.preventDefault();
 
     const provider = new firebase.auth.GithubAuthProvider();
-    firebase.auth().signInWithPopup(provider);
+    firebase.auth().signInWithPopup(provider).then(function(result){
+      console.log('result', result);
+    });
   }
 
   render() {

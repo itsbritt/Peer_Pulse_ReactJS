@@ -22,6 +22,7 @@ class AddTopic extends Component {
     const topicTitle = this.refs.topicTitle.value;
     const description = this.refs.description.value;
     const idea = this.refs.idea.value;
+    const userid = firebase.auth().currentUser.uid
 
     firebase.database()
       .ref('/topics')
@@ -29,7 +30,8 @@ class AddTopic extends Component {
         title: topicTitle,
         description: description,
         idea: idea,
-        date: Math.floor(Date.now() / 1000)
+        date: Math.floor(Date.now() / 1000),
+        userid: userid
       }).then(data => {
         // redirects you back to home
         hashHistory.push('/');
