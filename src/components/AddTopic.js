@@ -27,11 +27,7 @@ class AddTopic extends Component {
         idea: idea,
         date: Math.floor(Date.now() / 1000)
       }).then(data => {
-        console.log('Saved the Topic');
-        this.refs.topicTitle.value = '';
-        this.refs.description.value = '';
-        this.refs.idea.value = '';
-
+        // redirects you back to home
         hashHistory.push('/');
       });
   }

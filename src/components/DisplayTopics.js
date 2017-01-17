@@ -9,7 +9,6 @@ class DisplayTopics extends Component {
       <Topics />
     );
   }
-
 }
 
 export default DisplayTopics;
