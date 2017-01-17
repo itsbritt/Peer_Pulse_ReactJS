@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import { firebase } from '../utils/firebase';
 import { hashHistory } from 'react-router';
 import { Button, Col } from 'react-bootstrap';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import SimpleMenu from './SimpleMenu';
-
 
 class AddTopic extends Component {
   constructor(props) {
@@ -39,9 +36,6 @@ class AddTopic extends Component {
     render() {
       return (
         <div>
-          <MuiThemeProvider>
-          <SimpleMenu/>
-        </MuiThemeProvider>
           <form>
             <input
               className="form-control"
