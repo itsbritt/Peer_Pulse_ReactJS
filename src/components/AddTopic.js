@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { firebase } from '../utils/firebase';
 import { hashHistory } from 'react-router';
+import { Button, Col } from 'react-bootstrap';
 
 class AddTopic extends Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class AddTopic extends Component {
     render() {
       return (
         <div>
-          <form onSubmit={ this.handleSubmit.bind(this) }>
+          <form>
             <input
               className="form-control"
               type="text"
@@ -54,6 +55,11 @@ class AddTopic extends Component {
               type="text"
               ref="idea"
               placeholder="Idea" />
+            </form>
+            <Button>
+              <h3>Add another idea</h3>
+            </Button>
+            <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="btn btn-primary"
               type="submit"

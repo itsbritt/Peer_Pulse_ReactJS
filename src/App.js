@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './index.css';
-
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 import Home from './components/Home';
