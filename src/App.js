@@ -5,6 +5,9 @@ import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
 
 import {firebase} from './utils/firebase';
+import AddTopic from './components/AddTopic';
+
+import Nav from './components/Nav';
 
 
 class App extends Component {
@@ -46,7 +49,7 @@ class App extends Component {
         <h1>Peer-Pulse</h1>
         { welcomeMessage }
 
-
+        <Nav/>
         <div className="content">
           {this.props.children}
         </div>

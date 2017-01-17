@@ -20,7 +20,7 @@ class AddTopic extends Component {
     const idea = this.refs.idea.value;
 
     firebase.database()
-      .ref('/topic')
+      .ref('/topics')
       .push({
         title: topicTitle,
         description: description,
@@ -29,7 +29,8 @@ class AddTopic extends Component {
       }).then(data => {
         console.log('Saved the Topic');
         this.refs.topicTitle.value = '';
-        this.refs.desciption.value = '';
+        this.refs.description.value = '';
+        this.refs.idea.value = '';
 
         hashHistory.push('/');
       });
