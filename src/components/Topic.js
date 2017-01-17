@@ -22,7 +22,7 @@ class Topic extends Component {
         <div className="topic" onClick={ this.handleUpClick.bind(this) }>
 
 
-          { <h4 className="topic-title">{this.props.title}</h4> }
+          { <h4 className="topic-title">{this.props.titleObject.title}</h4> }
         </div>
         <hr/>
       </div>

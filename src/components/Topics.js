@@ -14,17 +14,26 @@ class Topics extends Component {
   }
 
   componentWillMount() {
-    firebase.database()
-    .ref('/topics')
-    .on('value', data => {
-      const topicData = firebaseListToArray(data.val());
-      console.log('topic data: ', topicData);
+    let self=this;
+      const userid = firebase.auth().currentUser.uid;
+      var topicsRef = firebase.database().ref("topics/");
+      topicsRef.orderByChild("userid").equalTo(userid).on("value", function(data) {
+        // const topicData = firebaseListToArray(data.val().userid);
+        console.log("Equal to filter: ", data.val());
 
-      this.setState({
-        topics: topicData
-      })
-    });
-  }
+        var topicCollection = data.val();
+
+        for(let key in topicCollection){
+          topicCollection[key].uniqueKey = key;
+          console.log('key: ',topicCollection[key].userid);
+          self.setState({
+            topics: self.state.topics.concat(topicCollection[key])
+          });
+        }
+
+  });
+
+    }
 
   // handleRedirect() {
   //   window.location = '/#/ideas';
@@ -33,18 +42,17 @@ class Topics extends Component {
 
 
   // I need to pass in a prop that houses the ideas ideas={topic.idea}
-  
+
 
   render() {
     const topics = this.state.topics.map(topic => {
-      return <Topic key={ topic.id} title={ topic.title } />
+      return <Topic key={ topic.uniqueKey } titleObject={ topic } />
     })
 
     return (
       <section id="topics" className="container-fluid">
 
         <div className="row">
-
         { topics }
 
         </div>
