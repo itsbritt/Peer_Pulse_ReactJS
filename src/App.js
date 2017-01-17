@@ -41,15 +41,10 @@ class App extends Component {
       '';
 
     return (
-      <div className="container">
+      <div className="background">
         { this.sessionButton() }
-        <h1>Peer-Pulse</h1>
+        <h1 className="header">Peer-Pulse</h1>
         { welcomeMessage }
-
-
-        <div className="content">
-          {this.props.children}
-        </div>
       </div>
     );
   }
