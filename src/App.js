@@ -21,10 +21,10 @@ class App extends Component {
           <Col xs={1}/>
           <Col xs={10} className="centeredContainer">
           <img src={ Background } className="logoImage"/>
-          <h1 className="pageHeader">PeerPulse</h1>
+          <h1 className="header">PeerPulse</h1>
           <h4>The smarter way to share ideas</h4>
-          <Button className="landingButton">
-            <Link to="/home"><h2>get started</h2></Link>
+          <Button className="btn btn-primary" id="landingButton">
+            <Link to="/home"><h2 className="header">get started</h2></Link>
           </Button>
         </Col>
         <Col xs={1}/>
