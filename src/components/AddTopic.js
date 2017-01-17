@@ -21,17 +21,14 @@ class AddTopic extends Component {
     const idea = this.refs.idea.value;
 
     firebase.database()
-      .ref('/topic')
+      .ref('/topics')
       .push({
         title: topicTitle,
         description: description,
         idea: idea,
         date: Math.floor(Date.now() / 1000)
       }).then(data => {
-        console.log('Saved the Topic');
-        this.refs.topicTitle.value = '';
-        this.refs.desciption.value = '';
-
+        // redirects you back to home
         hashHistory.push('/');
       });
   }

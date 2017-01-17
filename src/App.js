@@ -8,6 +8,9 @@ import { Link } from 'react-router';
 import Background from '../images/logo.png';
 
 import {firebase} from './utils/firebase';
+import AddTopic from './components/AddTopic';
+
+import Nav from './components/Nav';
 
 
 class App extends Component {
@@ -15,6 +18,9 @@ class App extends Component {
   render() {
 
     return (
+
+
+
       <div className="background">
 
           <Col xs={1}/>
@@ -27,6 +33,7 @@ class App extends Component {
           </Button>
         </Col>
         <Col xs={1}/>
+
       </div>
     );
   }
