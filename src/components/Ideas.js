@@ -1,15 +1,56 @@
 import React, { Component } from 'react';
 
+import Topic from './Topic';
+import { firebase, firebaseListToArray } from '../utils/firebase';
+
+import { Link } from 'react-router';
+
+
 class Ideas extends Component {
-  render() {
-    return(
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    )
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      topics: []
+    }
   }
 
+  componentWillMount() {
+    firebase.database()
+    .ref('/topics')
+    .on('value', data => {
+      const topicData = firebaseListToArray(data.val());
+      console.log('topic data: ', topicData);
+
+      this.setState({
+        topics: topicData
+      })
+    });
+  }
+
+  handleUpClick() {
+    this.setState({
+      voteCount: this.state.voteCount++
+    })
+  }
+
+  render() {
+    const topics = this.state.topics.map(topic => {
+      return (
+
+          <Topic key={ topic.id} title={ topic.idea[0] } />
+      );
+    })
+
+    return (
+      <section id="topics" className="container-fluid">
+        <div className="row">
+          { topics }
+        </div>
+      </section>
+    )
+  }
 }
 
 export default Ideas;
