@@ -18,19 +18,18 @@ class AddTopic extends Component {
     const topicTitle = this.refs.topicTitle.value;
     const description = this.refs.description.value;
     const idea = this.refs.idea.value;
-    
+    const user = firebase.auth().currentUser;
 
     firebase.database()
-      .ref('/topic')
-      .push({
+      .ref('/topics')
+      .child(user.uid)
+      .set({
         title: topicTitle,
         description: description,
         idea: idea,
         date: Math.floor(Date.now() / 1000)
       }).then(data => {
         console.log('Saved the Topic');
-        this.refs.topicTitle.value = '';
-        this.refs.desciption.value = '';
 
         hashHistory.push('/');
       });
@@ -58,7 +57,7 @@ class AddTopic extends Component {
             <input
               className="btn btn-primary"
               type="submit"
-              value="Save" />
+              />
           </form>
         </div>
       );

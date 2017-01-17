@@ -4,6 +4,7 @@ import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 
 import {firebase} from '../utils/firebase';
+import AddTopic from './AddTopic';
 
 
 class Home extends Component {
@@ -44,6 +45,7 @@ class Home extends Component {
         { this.sessionButton() }
         <h1 className="header">Peer-Pulse</h1>
         { welcomeMessage }
+        <AddTopic/>
       </div>
     );
   }
