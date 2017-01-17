@@ -8,7 +8,7 @@ import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import DisplayTopics from './DisplayTopics';
+import Topics from './Topics';
 
 class Home extends Component {
   constructor(props) {
@@ -54,7 +54,7 @@ class Home extends Component {
       <Button className="btn btn-primary" id="landingButton">
         <Link to="/add"><h2 className="header">new project</h2></Link>
       </Button>
-      <DisplayTopics />
+      <Topics />
     </Col>
       <Col xs={1}/>
     </div>
