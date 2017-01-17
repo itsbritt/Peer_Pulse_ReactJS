@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import { firebase } from '../utils/firebase';
 import { hashHistory } from 'react-router';
+import { Button, Col } from 'react-bootstrap';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import SimpleMenu from './SimpleMenu';
+
 
 class AddTopic extends Component {
   constructor(props) {
@@ -18,19 +22,18 @@ class AddTopic extends Component {
     const topicTitle = this.refs.topicTitle.value;
     const description = this.refs.description.value;
     const idea = this.refs.idea.value;
-    const user = firebase.auth().currentUser;
+    const userid = firebase.auth().currentUser.uid
 
     firebase.database()
       .ref('/topics')
-      .child(user.uid)
-      .set({
+      .push({
         title: topicTitle,
         description: description,
         idea: idea,
-        date: Math.floor(Date.now() / 1000)
+        date: Math.floor(Date.now() / 1000),
+        userid: userid
       }).then(data => {
-        console.log('Saved the Topic');
-
+        // redirects you back to home
         hashHistory.push('/');
       });
   }
@@ -38,7 +41,10 @@ class AddTopic extends Component {
     render() {
       return (
         <div>
-          <form onSubmit={ this.handleSubmit.bind(this) }>
+          <MuiThemeProvider>
+          <SimpleMenu/>
+        </MuiThemeProvider>
+          <form>
             <input
               className="form-control"
               type="text"
@@ -54,10 +60,15 @@ class AddTopic extends Component {
               type="text"
               ref="idea"
               placeholder="Idea" />
+            </form>
+            <Button>
+              <h3>Add another idea</h3>
+            </Button>
+            <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="btn btn-primary"
               type="submit"
-              />
+              value="Save" />
           </form>
         </div>
       );
