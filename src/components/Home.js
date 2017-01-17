@@ -43,9 +43,6 @@ class Home extends Component {
 
     return (
       <div className="background">
-        <MuiThemeProvider>
-        <SimpleMenu/>
-      </MuiThemeProvider>
       <Col xs={1}/>
       <Col xs={10} className="centeredContainer">
       <div>
