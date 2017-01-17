@@ -5,6 +5,8 @@ import LogoutButton from './LogoutButton';
 import { Button, Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
+import SimpleMenu from './SimpleMenu';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class Home extends Component {
   constructor(props) {
@@ -53,6 +55,7 @@ class Home extends Component {
     </Col>
       <Col xs={1}/>
     </div>
+
     );
   }
 }

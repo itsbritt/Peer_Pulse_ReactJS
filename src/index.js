@@ -12,6 +12,8 @@ import App from './App';
 import Home from './components/Home';
 import AddTopic from './components/AddTopic';
 import './index.css';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 ReactDOM.render(
   <Router history={ hashHistory }>
