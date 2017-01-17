@@ -1,50 +1,33 @@
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
+import Home from './components/Home';
+import { Button, Col } from 'react-bootstrap';
+import { Link } from 'react-router';
+import Background from '../images/logo.png';
 
 import {firebase} from './utils/firebase';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      user: {}
-    }
-  }
-//lifecycle method: if user is logged in, show user object, if not show empty object
-  componentWillMount() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        console.log('Logged in:', user);
-        this.setState({ user });
-      } else {
-        this.setState({ user: {} });
-      }
-    });
-  }
-//if someone is not logged in, show login..if not show logout button and name of person,
-  sessionButton() {
-    if (!firebase.auth().currentUser) {
-      return <LoginButton>Log in with GitHub</LoginButton>;
-    } else {
-      return <LogoutButton>Logout { this.state.user.displayName }</LogoutButton>;
-    }
-  }
 
   render() {
-    const welcomeMessage = (firebase.auth().currentUser) ?
-      <h4>Hi { this.state.user.displayName }!</h4> :
-      '';
 
     return (
       <div className="background">
-        { this.sessionButton() }
-        <h1 className="header">Peer-Pulse</h1>
-        { welcomeMessage }
+
+          <Col xs={1}/>
+          <Col xs={10} className="centeredContainer">
+          <img src={ Background } className="logoImage"/>
+          <h1 className="pageHeader">PeerPulse</h1>
+          <h4>The smarter way to share ideas</h4>
+          <Button className="landingButton">
+            <Link to="/home"><h2>get started</h2></Link>
+          </Button>
+        </Col>
+        <Col xs={1}/>
       </div>
     );
   }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 
-import LoginButton from './components/LoginButton';
-import LogoutButton from './components/LogoutButton';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 
-import {firebase} from './utils/firebase';
+import {firebase} from '../utils/firebase';
 
 
 class Home extends Component {

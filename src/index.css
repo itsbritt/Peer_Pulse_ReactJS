@@ -1,10 +1,31 @@
-
+.landingButton {
+  text-align: center;
+  margin-top: 150px;
+}
 .background {
-  background: url(/images/background.psd);
+  background: url('../images/background.png');
   width: 100%;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 .header{
   font-family: 'Rubik', sans-serif;
   text-align: center;
+}
+.centeredContainer {
+  text-align: center;
+}
+.pageHeader {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+}
+.landingTitle{
+  margin-top: 50px;
+}
+.logoImage {
+  margin-top: 150px;
+  margin-bottom: 20px;
+  width: 100%;
 }
