@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Topic from './Topic'
+import Topic from './Topic';
 import { firebase, firebaseListToArray } from '../utils/firebase';
 
 class Topics extends Component {
@@ -26,13 +26,23 @@ class Topics extends Component {
     });
   }
 
+  // handleRedirect() {
+  //   window.location = '/#/ideas';
+  // }
+  // <button onClick={this.handleRedirect.bind(this)}>Edit</button>
+
+
+  // I need to pass in a prop that houses the ideas ideas={topic.idea}
+  
+
   render() {
     const topics = this.state.topics.map(topic => {
-      return <Topic key={ topic.id} idea={ topic.title } />;
+      return <Topic key={ topic.id} title={ topic.title } />
     })
 
     return (
       <section id="topics" className="container-fluid">
+
         <div className="row">
 
         { topics }

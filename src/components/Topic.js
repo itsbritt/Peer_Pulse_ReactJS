@@ -20,9 +20,9 @@ class Topic extends Component {
     return (
       <div className="col-sm-6 col-md-6 col-lg-12">
         <div className="topic" onClick={ this.handleUpClick.bind(this) }>
-      
-          <h1 >{this.state.voteCount}</h1>
-          { <h4 className="topic-title">{this.props.idea}</h4> }
+
+
+          { <h4 className="topic-title">{this.props.title}</h4> }
         </div>
         <hr/>
       </div>
