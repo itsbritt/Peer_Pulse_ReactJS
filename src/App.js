@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import AddTopic from './components/AddTopic'
 
 import LoginButton from './components/LoginButton';
 import LogoutButton from './components/LogoutButton';
@@ -45,7 +46,7 @@ class App extends Component {
         { this.sessionButton() }
         <h1>Peer-Pulse</h1>
         { welcomeMessage }
-
+        <AddTopic />
 
         <div className="content">
           {this.props.children}

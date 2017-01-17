@@ -18,6 +18,7 @@ class AddTopic extends Component {
     const topicTitle = this.refs.topicTitle.value;
     const description = this.refs.description.value;
     const idea = this.refs.idea.value;
+    
 
     firebase.database()
       .ref('/topic')
