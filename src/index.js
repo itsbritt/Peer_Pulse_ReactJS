@@ -21,6 +21,7 @@ ReactDOM.render(
       <Route path="/home" component={ Home }/>
       <Route path="/add" component={ AddTopic }/>
       <Route path = "/mytopics" component={DisplayTopics} />
+      <Route path = "/ideas" component={ Ideas } />
   </Router>,
   document.getElementById('root')
 );
