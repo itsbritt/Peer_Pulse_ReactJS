@@ -31,14 +31,12 @@ class Home extends Component {
   sessionButton() {
     if (!firebase.auth().currentUser) {
       return <LoginButton>Log in with GitHub</LoginButton>;
-    } else {
-      return <LogoutButton>Logout { this.state.user.displayName }</LogoutButton>;
     }
   }
 
   render() {
     const welcomeMessage = (firebase.auth().currentUser) ?
-      <h4>Hi { this.state.user.displayName }!</h4> :
+       `Hi ${this.state.user.displayName}!` :
       '';
 
     return (

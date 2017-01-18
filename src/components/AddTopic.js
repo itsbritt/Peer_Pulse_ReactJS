@@ -21,7 +21,7 @@ class AddTopic extends Component {
     const topicTitle = this.refs.topicTitle.value;
     const description = this.refs.description.value;
     const idea = this.refs.idea.value;
-    const userid = firebase.auth().currentUser.uid
+    const userid = firebase.auth().currentUser.uid;
 
     firebase.database()
       .ref('/topics')
@@ -33,7 +33,7 @@ class AddTopic extends Component {
         userid: userid
       }).then(data => {
         // redirects you back to home
-        hashHistory.push('/');
+        hashHistory.push('/home');
       });
   }
 
@@ -60,9 +60,6 @@ class AddTopic extends Component {
               ref="idea"
               placeholder="Idea" />
             </form>
-            <Button>
-              <h3>Add another idea</h3>
-            </Button>
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="btn btn-primary"
