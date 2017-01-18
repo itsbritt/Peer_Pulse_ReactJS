@@ -64,6 +64,12 @@ class Upvote extends Component {
   var countVotes = function(votes){
     if (this.upvoted){
       return this.topics.votes + 1;
+    } else if (this.downvoted) {
+      return this.post.votes -1;
+    } else {
+      return this.post.votes
+    }
+    }
     })
   }
     render() {

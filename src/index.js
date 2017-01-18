@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 
 import DisplayTopics from './components/DisplayTopics';
 import Ideas from './components/Ideas';
+import ClickedTopic from './components/ClickedTopic';
 
 dotenv.config({ silent: true });
 
@@ -21,7 +22,7 @@ ReactDOM.render(
       <Route path="/home" component={ Home }/>
       <Route path="/add" component={ AddTopic }/>
       <Route path = "/mytopics" component={DisplayTopics} />
-      <Route path = "/ideas" component={ Ideas } />
+      <Route path = "/ideas/:id" component={ ClickedTopic } />
   </Router>,
   document.getElementById('root')
 );
