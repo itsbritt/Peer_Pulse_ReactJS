@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { CardStack, Card } from 'react-cardstack';
 import { Button, Col, Collapse, Well } from 'react-bootstrap';
 
 class Welcome extends Component{
@@ -18,13 +17,7 @@ class Welcome extends Component{
           <Collapse in={this.state.open}>
             <div>
               <Well>
-                <form>
-                <input
-                  className="form-control"
-                  type="text"
-                  ref="idea"
-                  placeholder="Idea" />
-                </form>
+                {this.props.children}
               </Well>
             </div>
           </Collapse>

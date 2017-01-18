@@ -20,7 +20,7 @@ class AddTopic extends Component {
     // let newArr;
     const topicsRef = firebase.database().ref("topics/");
     const topicTitle = this.refs.topicTitle.value;
-    const description = this.refs.description.value;
+    // const description = this.refs.description.value;
     const idea = [this.refs.idea.value];
     const userid = firebase.auth().currentUser.uid
 
@@ -45,7 +45,7 @@ class AddTopic extends Component {
       .ref('/topics')
       .push({
         title: topicTitle,
-        description: description,
+        // description: description,
         idea: idea,
         date: Math.floor(Date.now() / 1000),
         userid: userid
@@ -67,13 +67,22 @@ class AddTopic extends Component {
               type="text"
               ref="topicTitle"
               placeholder="Topic Title" />
+          </form>
+            <Welcome>
+              <form>
             <input
               className="form-control"
               type="text"
-              ref="description"
-              placeholder="Description" />
-            <Welcome />
-          </form>
+              ref="idea"
+              placeholder="Idea" />
+            </form>
+</Welcome>
+            <input
+              className="form-control"
+              type="text"
+              ref="ideaAdd"
+              placeholder="Add new Idea" />
+
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="btn btn-primary"
