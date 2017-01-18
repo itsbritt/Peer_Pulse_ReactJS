@@ -17,17 +17,18 @@ class AddTopic extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // let newArr;
+
     const topicsRef = firebase.database().ref("topics/");
     const topicTitle = this.refs.topicTitle.value;
-    // const description = this.refs.description.value;
-    const idea = [this.refs.idea.value];
     const userid = firebase.auth().currentUser.uid
 
-    const ideaNew = this.refs.ideaAdd.value;
+    const idea1 = this.refs.idea1.value;
+    const idea2 = this.refs.idea2.value;
+    const idea3 = this.refs.idea3.value;
+    const idea4 = this.refs.idea4.value;
+    const idea5 = this.refs.idea5.value;
 
-
-    let newArr = idea.concat(ideaNew)
+    const newArr = [idea1, idea2, idea3, idea4, idea5]
 
     topicsRef.orderByChild("title").equalTo(topicTitle).once("value",(data)=>{
       for (let theKey in data.val()) {
@@ -41,7 +42,7 @@ class AddTopic extends Component {
       .push({
         title: topicTitle,
         // description: description,
-        idea: idea,
+        idea: newArr,
         date: Math.floor(Date.now() / 1000),
         userid: userid
       }).then(data => {
@@ -63,24 +64,57 @@ class AddTopic extends Component {
               ref="topicTitle"
               placeholder="Topic Title" />
           </form>
+
             <Welcome>
               <form>
             <input
               className="form-control"
               type="text"
-              ref="idea"
+              ref="idea1"
               placeholder="Idea" />
             </form>
-</Welcome>
-<Welcome>
-  <form>
+            </Welcome>
+
+            <Welcome>
+          <form>
             <input
               className="form-control"
               type="text"
-              ref="ideaAdd"
+              ref="idea2"
               placeholder="Add new Idea" />
             </form>
-</Welcome>
+            </Welcome>
+
+            <Welcome>
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea3"
+              placeholder="Add new Idea" />
+            </form>
+            </Welcome>
+
+            <Welcome>
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea4"
+              placeholder="Add new Idea" />
+            </form>
+            </Welcome>
+
+            <Welcome>
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea5"
+              placeholder="Add new Idea" />
+            </form>
+            </Welcome>
+
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="btn btn-primary"
