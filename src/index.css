@@ -36,6 +36,15 @@ h2.header{
 .tabs {
   margin: 50px 0;
 }
+
+.topic-title {
+  font-family: 'Rubik',sans-serif;
+  font-weight: lighter;
+}
+#topicsDiv {
+  background-color: white;
+
+}
 .topicHeader{
   height: 20vh;
   display: flex;

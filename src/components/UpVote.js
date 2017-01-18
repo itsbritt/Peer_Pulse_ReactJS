@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 
 import { firebase } from '../utils/firebase';
 import { hashHistory } from 'react-router';
-import { Button, Col } from 'react-bootstrap';
-import SimpleMenu from './SimpleMenu';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Welcome from './Welcome';
-class AddTopic extends Component {
+
+class Upvote extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      topic: {}
+      props: ['post']
     }
   }
 
@@ -47,54 +44,34 @@ class AddTopic extends Component {
         title: topicTitle,
         // description: description,
         idea: idea,
-        date: Math.floor(Date.now() / 1000),
-        userid: userid
+        upvoted: false,
+        downvoted: false
       }).then(data => {
         // redirects you back to home
         hashHistory.push('/home');
       });
   }
 
+  upvote(){
+    this.upvoted = !this.upvoted;
+    this.downvoted = false;
+  }
+  downvote(){
+    this.downvoted = !this.downvoted;
+    this.downvoted = false;
+  }
+
+  var countVotes = function(votes){
+    if (this.upvoted){
+      return this.topics.votes + 1;
+    })
+  }
     render() {
       return (
         <div>
-          <MuiThemeProvider>
-            <SimpleMenu />
-          </MuiThemeProvider>
-          <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="topicTitle"
-              placeholder="Topic Title" />
-          </form>
-            <Welcome>
-              <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="idea"
-              placeholder="Idea" />
-            </form>
-</Welcome>
-<Welcome>
-  <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="ideaAdd"
-              placeholder="Add new Idea" />
-            </form>
-</Welcome>
-            <form onSubmit={ this.handleSubmit.bind(this) }>
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value="Save" />
-          </form>
         </div>
       );
     }
   }
 
-  export default AddTopic;
+  export default UpVote;

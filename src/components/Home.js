@@ -7,6 +7,9 @@ import { Button, Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
 import Topics from './Topics';
+import Welcome from './Welcome';
+import SimpleMenu from './SimpleMenu';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class Home extends Component {
   constructor(props) {
@@ -31,18 +34,21 @@ class Home extends Component {
   sessionButton() {
     if (!firebase.auth().currentUser) {
       return <LoginButton>Log in with GitHub</LoginButton>;
-    } else {
-      return <LogoutButton>Logout { this.state.user.displayName }</LogoutButton>;
     }
   }
 
   render() {
     const welcomeMessage = (firebase.auth().currentUser) ?
-      <h4>Hi { this.state.user.displayName }!</h4> :
+       `Hi ${this.state.user.displayName}!` :
       '';
 
     return (
       <div className="background">
+      <div>
+      <MuiThemeProvider>
+        <SimpleMenu />
+      </MuiThemeProvider>
+      </div>
       <Col xs={1}/>
       <Col xs={10} className="centeredContainer">
       <div>
@@ -55,6 +61,7 @@ class Home extends Component {
       <Topics />
     </Col>
       <Col xs={1}/>
+
     </div>
 
     );

@@ -24,10 +24,14 @@ class Topic extends Component {
 
 
     return (
-      <div className="col-sm-6 col-md-6 col-lg-12">
-      <Link to={"/Ideas/"+ bingo} >
+
+      <div id="topicsDiv" className="col-sm-6 col-md-6 col-lg-12">
+      <Link to={"/Ideas/"+ bingo}>
         <div className="topic" onClick={ this.handleUpClick.bind(this) }>
-          <h4 className="topic-title">{ this.props.titleObject.title }</h4>
+
+          { <h4 className="topic-title">{this.props.titleObject.title}</h4> }
+
+
         </div>
         <hr/>
         </Link>
