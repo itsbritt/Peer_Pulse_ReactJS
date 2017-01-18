@@ -13,26 +13,27 @@ class Topics extends Component {
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let self=this;
-      const userid = firebase.auth().currentUser.uid;
-      var topicsRef = firebase.database().ref("topics/");
-      topicsRef.orderByChild("userid").equalTo(userid).on("value", function(data) {
-        // const topicData = firebaseListToArray(data.val().userid);
-        console.log("Equal to filter: ", data.val());
+    var topicsRef = firebase.database().ref("topics/");
 
-        var topicCollection = data.val();
+      firebase.auth().onAuthStateChanged(function(userData){
 
-        for(let key in topicCollection){
-          topicCollection[key].uniqueKey = key;
-          console.log('key: ',topicCollection[key].userid);
-          self.setState({
-            topics: self.state.topics.concat(topicCollection[key])
-          });
-        }
+        topicsRef.orderByChild("userid").equalTo(userData.uid).once("value", function(data) {
+              // const topicData = firebaseListToArray(data.val().userid);
+              console.log("Equal to filter: ", data.val());
 
-  });
+              var topicCollection = data.val();
 
+              for(let key in topicCollection){
+                topicCollection[key].uniqueKey = key;
+                console.log('key: ',topicCollection[key].uniqueKey);
+                self.setState({
+                  topics: self.state.topics.concat(topicCollection[key])
+                });
+              }
+        });
+      })
     }
 
   // handleRedirect() {
@@ -50,10 +51,12 @@ class Topics extends Component {
     })
 
     return (
-      <section id="topics" className="container-fluid">
+      <section id="topicsDiv" className="container-fluid">
 
         <div className="row">
+
         { topics }
+
 
         </div>
       </section>
