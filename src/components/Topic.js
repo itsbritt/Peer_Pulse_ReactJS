@@ -18,9 +18,8 @@ class Topic extends Component {
     })
   }
 
-
   render() {
-  
+
     return (
       <div id="topicsDiv" className="col-sm-6 col-md-6 col-lg-12">
           <h4 className="topic-title" onClick={this.handleUpClick.bind(this)}><Link to={"/Ideas/"+ this.props.titleObject.title}>{this.props.titleObject.title}</Link></h4>

@@ -4,6 +4,7 @@ import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import dotenv from 'dotenv';
 
 import DisplayTopics from './components/DisplayTopics';
+
 import ClickedTopic from './components/ClickedTopic';
 
 dotenv.config({ silent: true });

@@ -10,6 +10,9 @@ import Topics from './Topics';
 import Welcome from './Welcome';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Votes from './Votes';
+// import Upvote from 'react-upvote';
+import VotingUp from './VotingUp';
 
 class Home extends Component {
   constructor(props) {
@@ -59,6 +62,7 @@ class Home extends Component {
         <Link to="/add"><h2 className="header">new project</h2></Link>
       </Button>
       <Topics />
+  <Votes />
     </Col>
       <Col xs={1}/>
 
