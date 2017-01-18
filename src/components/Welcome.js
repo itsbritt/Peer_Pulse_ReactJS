@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Collapse, Well } from 'react-bootstrap';
+import { Button, Collapse, Well } from 'react-bootstrap';
 
 class Welcome extends Component{
   constructor(...args) {

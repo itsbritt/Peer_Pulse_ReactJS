@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { firebase } from '../utils/firebase';
 import { hashHistory } from 'react-router';
-import { Button, Col } from 'react-bootstrap';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
@@ -14,7 +13,7 @@ class AddTopic extends Component {
       topic: {}
     }
   }
-  
+
   handleSubmit(e) {
     e.preventDefault();
 

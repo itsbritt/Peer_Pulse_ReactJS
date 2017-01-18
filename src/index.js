@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory, IndexRoute } from 'react-router';
+import { Router, Route, hashHistory } from 'react-router';
 import dotenv from 'dotenv';
 
 import DisplayTopics from './components/DisplayTopics';

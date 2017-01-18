@@ -1,36 +1,27 @@
 import React, { Component } from 'react';
 
 class Votes extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
-    this.state={
-                  "id": 0,
-                  "votes": 0
-                }
+    this.state = {
+      voteCount: 1
+    }
   }
-  getInitialState() {
-  return { votes: this.props.votes };
-}
-_upvote() {
-  var newVotes = this.state.votes + 1;
 
-  this.setState({
-    votes: newVotes
-  });
-}
-_downvote() {
-  var newVotes = this.state.votes - 1;
+  handleUpClick() {
+    this.setState({
+      voteCount: this.state.voteCount++
+    })
+      this.update = this.update.bind(this);
+  }
 
-  this.setState({
-    votes: newVotes
-  });
-}
+
   render(){
     return(
       <div>
-        <a onClick={this.upvote}>▲</a>
-        <strong>{this.state.votes}</strong>
+        <a onClick={this.handleUpClick}>▲</a>
+        <strong>{this.state.voteCount}</strong>
         <a onClick={this.downvote}>▼</a>
       </div>
     )
