@@ -14,7 +14,7 @@ class UserPhoto extends Component {
     var topicsRef = firebase.database().ref("topics/");
 
       firebase.auth().onAuthStateChanged((userData)=>{
-        
+
               console.log('user image', userData.photoURL);
               this.setState({
                 imgurl: userData.photoURL
@@ -28,7 +28,7 @@ class UserPhoto extends Component {
   render(){
     return(
       <div>
-        <img src={ this.state.imgurl }/>
+        <img className="userPhoto img-circle" src={ this.state.imgurl }/>
       </div>
     )
   }

@@ -1,6 +1,6 @@
 #landingButton {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 30px;
 }
 .background {
   background: url('../images/background.png');
@@ -41,7 +41,8 @@ h2.header{
   font-family: 'Rubik',sans-serif;
   /*font-weight: lighter;*/
   color: black;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 3px;
 }
 #topicsDiv {
   background-color: white;
@@ -53,4 +54,8 @@ h2.header{
   justify-content: center;
   align-items: center;
   font-size: 30px;
+}
+.userPhoto{
+  max-width: 130px;
+  margin-top: 10px;
 }
