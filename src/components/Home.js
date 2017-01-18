@@ -7,6 +7,7 @@ import { Button, Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
 import Topics from './Topics';
+import Welcome from './Welcome';
 
 class Home extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class Home extends Component {
       <Topics />
     </Col>
       <Col xs={1}/>
+      <Welcome />
     </div>
 
     );

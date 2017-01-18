@@ -18,17 +18,12 @@ class Topics extends Component {
     var topicsRef = firebase.database().ref("topics/");
 
       firebase.auth().onAuthStateChanged(function(userData){
-        self.setState({
-          topics:[]
-        })
 
         topicsRef.orderByChild("userid").equalTo(userData.uid).once("value", function(data) {
               // const topicData = firebaseListToArray(data.val().userid);
               console.log("Equal to filter: ", data.val());
 
               var topicCollection = data.val();
-
-
 
               for(let key in topicCollection){
                 topicCollection[key].uniqueKey = key;
@@ -37,13 +32,8 @@ class Topics extends Component {
                   topics: self.state.topics.concat(topicCollection[key])
                 });
               }
-
         });
-
       })
-
-
-
     }
 
   // handleRedirect() {
