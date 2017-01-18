@@ -58,4 +58,6 @@ h2.header{
 .userPhoto{
   max-width: 130px;
   margin-top: 10px;
+  background-color: white;
+  padding: 3px;
 }
