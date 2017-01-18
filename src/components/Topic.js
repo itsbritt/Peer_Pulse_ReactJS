@@ -18,23 +18,12 @@ class Topic extends Component {
     })
   }
 
+
   render() {
-    const topicsRef = firebase.database().ref("topics/");
-    const bingo = topicsRef.data.key;
-
-
+  
     return (
-
       <div id="topicsDiv" className="col-sm-6 col-md-6 col-lg-12">
-      <Link to={"/Ideas/"+ bingo}>
-        <div className="topic" onClick={ this.handleUpClick.bind(this) }>
-
-          { <h4 className="topic-title">{this.props.titleObject.title}</h4> }
-
-
-        </div>
-        <hr/>
-        </Link>
+          <h4 className="topic-title" onClick={this.handleUpClick.bind(this)}><Link to={"/Ideas/"+ this.props.titleObject.title}>{this.props.titleObject.title}</Link></h4>
       </div>
     );
   }

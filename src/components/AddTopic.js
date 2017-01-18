@@ -26,11 +26,6 @@ class AddTopic extends Component {
 
     const ideaNew = this.refs.ideaAdd.value;
 
-    // if (newArr) {
-    //   newArr = newArr.concat(ideaNew)
-    // } else {
-    //   newArr = idea.concat(ideaNew)
-    // }
 
     let newArr = idea.concat(ideaNew)
 
