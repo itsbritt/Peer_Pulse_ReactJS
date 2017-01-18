@@ -36,10 +36,21 @@ h2.header{
 .tabs {
   margin: 50px 0;
 }
+
 .topic-title {
   font-family: 'Rubik',sans-serif;
-  font-weight: lighter;
+  /*font-weight: lighter;*/
+  color: black;
+  font-size: 40px;
 }
 #topicsDiv {
   background-color: white;
+
+}
+.topicHeader{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
 }

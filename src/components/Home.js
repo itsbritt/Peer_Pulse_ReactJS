@@ -8,6 +8,11 @@ import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
 import Topics from './Topics';
 import Welcome from './Welcome';
+import SimpleMenu from './SimpleMenu';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Votes from './Votes';
+// import Upvote from 'react-upvote';
+import VotingUp from './VotingUp';
 
 class Home extends Component {
   constructor(props) {
@@ -42,6 +47,11 @@ class Home extends Component {
 
     return (
       <div className="background">
+      <div>
+      <MuiThemeProvider>
+        <SimpleMenu />
+      </MuiThemeProvider>
+      </div>
       <Col xs={1}/>
       <Col xs={10} className="centeredContainer">
       <div>
@@ -52,6 +62,7 @@ class Home extends Component {
         <Link to="/add"><h2 className="header">new project</h2></Link>
       </Button>
       <Topics />
+  <Votes />
     </Col>
       <Col xs={1}/>
 
