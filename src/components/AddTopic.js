@@ -14,7 +14,7 @@ class AddTopic extends Component {
       topic: {}
     }
   }
-
+  
   handleSubmit(e) {
     e.preventDefault();
 
