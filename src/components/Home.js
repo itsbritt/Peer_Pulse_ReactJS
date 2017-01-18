@@ -54,7 +54,7 @@ class Home extends Component {
       <Topics />
     </Col>
       <Col xs={1}/>
-      <Welcome />
+
     </div>
 
     );

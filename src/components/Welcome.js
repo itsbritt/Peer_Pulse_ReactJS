@@ -1,26 +1,34 @@
 import React, { Component } from 'react';
 import { CardStack, Card } from 'react-cardstack';
-
-
+import { Button, Col, Collapse, Well } from 'react-bootstrap';
 
 class Welcome extends Component{
-  render(){
-    return(
-      <CardStack
-          height={500}
-          width={400}
-          background='#f8f8f8'
-          hoverOffset={25}>
+  constructor(...args) {
+      super(...args);
 
-          <Card background='#2980B9'>
-              <h1>Number 1</h1>
-          </Card>
+      this.state = {};
+    }
 
-          <Card background='#27AE60'>
-              <h1>Number 2 </h1>
-          </Card>
-
-      </CardStack>
+    render() {
+      return (
+        <div>
+          <Button onClick={ ()=> this.setState({ open: !this.state.open })}>
+            Add Idea
+          </Button>
+          <Collapse in={this.state.open}>
+            <div>
+              <Well>
+                <form>
+                <input
+                  className="form-control"
+                  type="text"
+                  ref="idea"
+                  placeholder="Idea" />
+                </form>
+              </Well>
+            </div>
+          </Collapse>
+        </div>
     )
   }
 }

@@ -19,7 +19,7 @@ class Topic extends Component {
 
   render() {
     return (
-      <div className="col-sm-6 col-md-6 col-lg-12">
+      <div id="topicsDiv" className="col-sm-6 col-md-6 col-lg-12">
       <Link to="/Ideas">
         <div className="topic" onClick={ this.handleUpClick.bind(this) }>
 

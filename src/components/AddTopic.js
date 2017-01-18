@@ -5,7 +5,7 @@ import { hashHistory } from 'react-router';
 import { Button, Col } from 'react-bootstrap';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
+import Welcome from './Welcome';
 class AddTopic extends Component {
   constructor(props) {
     super(props);
@@ -54,12 +54,8 @@ class AddTopic extends Component {
               type="text"
               ref="description"
               placeholder="Description" />
-            <input
-              className="form-control"
-              type="text"
-              ref="idea"
-              placeholder="Idea" />
-            </form>
+            <Welcome />
+          </form>
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="btn btn-primary"
