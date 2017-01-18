@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { firebase } from '../utils/firebase';
 
 class Topic extends Component {
 
@@ -18,14 +19,15 @@ class Topic extends Component {
   }
 
   render() {
+    const topicsRef = firebase.database().ref("topics/");
+    const bingo = topicsRef.data.key;
+
+
     return (
       <div className="col-sm-6 col-md-6 col-lg-12">
-      <Link to="/Ideas">
+      <Link to={"/Ideas/"+ bingo} >
         <div className="topic" onClick={ this.handleUpClick.bind(this) }>
-
-
-          { <h4 className="topic-title">{this.props.titleObject.title}</h4> }
-
+          <h4 className="topic-title">{ this.props.titleObject.title }</h4>
         </div>
         <hr/>
         </Link>
