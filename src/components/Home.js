@@ -2,17 +2,16 @@
 import React, { Component } from 'react';
 
 import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
 import { Button, Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
 import Topics from './Topics';
-import Welcome from './Welcome';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Votes from './Votes';
+import UserPhoto from './UserPhoto';
+
 // import Upvote from 'react-upvote';
-import VotingUp from './VotingUp';
 
 class Home extends Component {
   constructor(props) {
@@ -47,6 +46,7 @@ class Home extends Component {
 
     return (
       <div className="background">
+
       <div>
       <MuiThemeProvider>
         <SimpleMenu />
@@ -57,6 +57,7 @@ class Home extends Component {
       <div>
         { this.sessionButton() }
         <h1 className="header">{ welcomeMessage }</h1>
+        <UserPhoto />
       </div>
       <Button className="btn btn-primary" id="landingButton">
         <Link to="/add"><h2 className="header">new project</h2></Link>

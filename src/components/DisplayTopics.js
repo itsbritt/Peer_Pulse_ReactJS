@@ -12,7 +12,6 @@ class DisplayTopics extends Component {
     }
   }
   componentWillMount(){
-    const userid = firebase.auth().currentUser.uid;
 
     firebase.database()
     .ref('/topics')

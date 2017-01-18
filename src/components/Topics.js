@@ -18,7 +18,7 @@ class Topics extends Component {
     var topicsRef = firebase.database().ref("topics/");
 
       firebase.auth().onAuthStateChanged(function(userData){
-
+              console.log('user image', userData.photoURL);
         topicsRef.orderByChild("userid").equalTo(userData.uid).once("value", function(data) {
               // const topicData = firebaseListToArray(data.val().userid);
               console.log("Equal to filter: ", data.val());
