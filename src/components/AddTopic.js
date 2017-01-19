@@ -71,72 +71,64 @@ class AddTopic extends Component {
           <MuiThemeProvider>
             <SimpleMenu />
           </MuiThemeProvider>
-          <div className="centeredContainer">
-            <form>
-              <input
-                className="form-control"
-                type="text"
-                ref="topicTitle"
-                placeholder="Topic Title" />
+
+          <p className="add-topic-info">What's the plan?</p>
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="topicTitle"
+              placeholder="Add an Activity &raquo; ex: Where to eat?" />
+          </form>
+
+            <p className="add-topic-info">Add some suggestions:</p>
+              <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea1"
+              placeholder="Add a suggestion" />
             </form>
 
-              <Welcome>
-                <form>
-              <input
-                className="form-control"
-                type="text"
-                ref="idea1"
-                placeholder="Idea" />
-              </form>
-              </Welcome>
-
-              <Welcome>
-            <form>
-              <input
-                className="form-control"
-                type="text"
-                ref="idea2"
-                placeholder="Add new Idea" />
-              </form>
-              </Welcome>
-
-              <Welcome>
-            <form>
-              <input
-                className="form-control"
-                type="text"
-                ref="idea3"
-                placeholder="Add new Idea" />
-              </form>
-              </Welcome>
-
-              <Welcome>
-            <form>
-              <input
-                className="form-control"
-                type="text"
-                ref="idea4"
-                placeholder="Add new Idea" />
-              </form>
-              </Welcome>
-
-              <Welcome>
-            <form>
-              <input
-                className="form-control"
-                type="text"
-                ref="idea5"
-                placeholder="Add new Idea" />
-              </form>
-              </Welcome>
-
-              <form onSubmit={ this.handleSubmit.bind(this) }>
-              <input
-                className="btn btn-primary"
-                type="submit"
-                value="Save" />
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea2"
+              placeholder="... " />
             </form>
-          </div>
+
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea3"
+              placeholder="..." />
+            </form>
+
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea4"
+              placeholder="..." />
+            </form>
+
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea5"
+              placeholder="..." />
+            </form>
+
+            <form onSubmit={ this.handleSubmit.bind(this) }>
+            <input
+              className="save btn btn-primary"
+              type="submit"
+              value="Save" />
+          </form>
+
         </div>
       );
     }

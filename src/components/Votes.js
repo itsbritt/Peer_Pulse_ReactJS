@@ -30,13 +30,12 @@ class Votes extends Component {
       // I want to get the topic with id of: this.props.params.id
 
       return (
-        <div>
-        <h3 onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</h3>
-         <h1 className="upVote" >{this.props.voteObject}</h1>
-         <h3 onClick={ this.handleDownClick.bind(this)}>▼</h3>
-          <div className="topicHeader">
 
-          </div>
+        <div id='voteContainer'>
+        <p className="voteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
+         <h1 className="upVoteText" >{this.props.voteObject}</h1>
+         <p className="voteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
+
         </div>
     )
   }

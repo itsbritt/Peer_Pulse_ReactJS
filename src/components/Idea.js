@@ -12,8 +12,7 @@ class Idea extends Component {
     return (
       <div id="topicsDiv">
 
-
-      <Col xs={9}>
+      <Col xs={9} id="ideaName">
           <h4 className="topic-title">{this.props.ideaObject}</h4>
     </Col>
     </div>
