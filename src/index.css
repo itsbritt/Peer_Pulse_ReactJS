@@ -43,6 +43,15 @@ h2.header{
   color: black;
   font-size: 17px;
   padding: 10px;
+  text-align: center;
+}
+.topic-title-header {
+  font-family: 'Rubik',sans-serif;
+  border-radius: 5px;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  text-align: center;
 }
 #topicsDiv {
   background-color: rgba(244,244,244,.6);
