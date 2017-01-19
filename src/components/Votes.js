@@ -14,27 +14,51 @@ class Votes extends Component {
   handleUpClick() {
     var ideaId = this.props.ideaKey
     var firebaseId = this.props.topicKey
-    var voteLocation = '/topics/' + firebaseId + '/idea/'+ideaId;
+    var ideaLocation = firebase.database().ref('/topics/' + firebaseId + '/idea/');
+
+
     this.setState({
       votes: ++this.state.votes
     })
 
-    firebase.database()
-      .ref(voteLocation)
-      .update({
-        votes: this.state.votes,
-      })
+    ideaLocation.orderByChild('key').equalTo(ideaId).once('value',(data)=>{
+      console.log('data is: ', data.val())
 
-console.log('the iddea is', voteLocation);
+      for(let ideaKey in data.val()){
+        firebase.database().ref('/topics/' + firebaseId + '/idea/'+ideaKey).update({
+          votes: this.state.votes
+        })
+      }
+
+
+    })
+
+
+
+
+console.log('the iddea is', ideaLocation);
       // update in firebase
     }
 
-  handleDownClick() {
+    handleDownClick() {
+      var ideaId = this.props.ideaKey
+      var firebaseId = this.props.topicKey
+      var ideaLocation = firebase.database().ref('/topics/' + firebaseId + '/idea/');
+
       this.setState({
         votes: --this.state.votes
       })
-    }
 
+      ideaLocation.orderByChild('key').equalTo(ideaId).once('value',(data)=>{
+        console.log('data is: ', data.val())
+
+        for(let ideaKey in data.val()){
+          firebase.database().ref('/topics/' + firebaseId + '/idea/'+ideaKey).update({
+            votes: this.state.votes
+          })
+        }
+      })
+}
     render() {
       // I want to get the topic with id of: this.props.params.id
 
@@ -42,7 +66,7 @@ console.log('the iddea is', voteLocation);
 
         <div className='voteContainer'>
         <p className="upVoteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
-         <h1 className="upVoteText" >{this.props.voteObject}</h1>
+         <h1 className="upVoteText" >{this.state.votes}</h1>
          <p className="downVoteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
         </div>
     )
