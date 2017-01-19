@@ -63,67 +63,59 @@ class AddTopic extends Component {
           <MuiThemeProvider>
             <SimpleMenu />
           </MuiThemeProvider>
+          <p className="add-topic-info">What's the plan?</p>
           <form>
             <input
               className="form-control"
               type="text"
               ref="topicTitle"
-              placeholder="Topic Title" />
+              placeholder="Add an Activity &raquo; ex: Where to eat?" />
           </form>
 
-            <Welcome>
+            <p className="add-topic-info">Add some suggestions:</p>
               <form>
             <input
               className="form-control"
               type="text"
               ref="idea1"
-              placeholder="Idea" />
+              placeholder="Add a suggestion" />
             </form>
-            </Welcome>
 
-            <Welcome>
           <form>
             <input
               className="form-control"
               type="text"
               ref="idea2"
-              placeholder="Add new Idea" />
+              placeholder="... " />
             </form>
-            </Welcome>
 
-            <Welcome>
           <form>
             <input
               className="form-control"
               type="text"
               ref="idea3"
-              placeholder="Add new Idea" />
+              placeholder="..." />
             </form>
-            </Welcome>
 
-            <Welcome>
           <form>
             <input
               className="form-control"
               type="text"
               ref="idea4"
-              placeholder="Add new Idea" />
+              placeholder="..." />
             </form>
-            </Welcome>
 
-            <Welcome>
           <form>
             <input
               className="form-control"
               type="text"
               ref="idea5"
-              placeholder="Add new Idea" />
+              placeholder="..." />
             </form>
-            </Welcome>
 
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
-              className="btn btn-primary"
+              className="save btn btn-primary"
               type="submit"
               value="Save" />
           </form>
