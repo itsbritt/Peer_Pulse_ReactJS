@@ -89,14 +89,15 @@ class ClickedTopic extends Component {
         </div>
 
         <h1>{ topics }</h1>
-
+        <div className="ideasContainer">
           <div className="voteContainer">
             { votes }
           </div>
           <div className="ideaName">
             { idea }
           </div>
-          </div>
+        </div>
+        </div>
     );
   }
 }

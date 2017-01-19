@@ -32,9 +32,9 @@ class Votes extends Component {
       return (
 
         <div className='voteContainer'>
-        <p className="voteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
+        <p className="upVoteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
          <h1 className="upVoteText" >{this.props.voteObject}</h1>
-         <p className="voteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
+         <p className="downVoteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
         </div>
     )
   }

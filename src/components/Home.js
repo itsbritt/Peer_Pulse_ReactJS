@@ -58,7 +58,7 @@ class Home extends Component {
         <h1 className="header">{ welcomeMessage }</h1>
         <UserPhoto />
       </div>
-      <Button className="btn btn-primary" id="landingButton">
+      <Button className="btn btn-primary" id="newProjectBtn">
         <Link to="/add"><h2 className="header">new project</h2></Link>
       </Button>
       <Scrollbars
