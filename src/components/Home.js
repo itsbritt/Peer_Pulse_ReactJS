@@ -62,7 +62,7 @@ class Home extends Component {
         <Link to="/add"><h2 className="header">new project</h2></Link>
       </Button>
       <Scrollbars
-      style={{ height: 200 }}>
+      style={{ height: 250 }}>
       <div><Topics /></div>
       </Scrollbars>
 
