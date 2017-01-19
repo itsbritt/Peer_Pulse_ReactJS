@@ -58,21 +58,15 @@ h2.header{
   margin-top: 10px;
   border-radius: 5px;
  }
-
-.upVote {
-  margin: 0;
-}
-
 #voteContainer {
   float: left;
   clear: left;
+  margin: 20px 0 0 25px;
 }
-
 #ideaName {
   clear: right;
-  padding-top: 50px;
+  margin-top: 33px;
 }
-
 .topicHeader{
   height: 20vh;
   display: flex;
@@ -99,4 +93,12 @@ h2.header{
 }
 .save {
   margin: 8px;
+}
+p .voteIcon {
+  font-size: 12px;
+  margin: 2px;
+}
+.upVoteText {
+  font-size: 20px;
+  margin: 0;
 }

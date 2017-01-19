@@ -29,10 +29,9 @@ class Votes extends Component {
 
       return (
         <div id='voteContainer'>
-        <h3 onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</h3>
-         <h1 className="upVote" >{this.state.voteCount}</h1>
-         <h3 onClick={ this.handleDownClick.bind(this)}>▼</h3>
-
+        <p className="voteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
+         <h1 className="upVoteText" >{this.state.voteCount}</h1>
+         <p className="voteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
         </div>
     )
   }
