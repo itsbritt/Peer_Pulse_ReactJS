@@ -18,6 +18,7 @@ class ClickedTopic extends Component {
       idea: []
     }
   }
+
   componentDidMount(){
     var firebaseId = this.props.params.id;
     // console.log('KEY:', firebaseId);
@@ -81,20 +82,21 @@ class ClickedTopic extends Component {
 
     return (
       <div>
-      
-<div>
-  <MuiThemeProvider>
-    <SimpleMenu />
-  </MuiThemeProvider>
-</div>
-<h1>{ topics }</h1>
         <div>
-          { votes }
+          <MuiThemeProvider>
+            <SimpleMenu />
+          </MuiThemeProvider>
+        </div>
 
+        <h1>{ topics }</h1>
 
-{ idea }
-      </div>
-      </div>
+          <div className="voteContainer">
+            { votes }
+          </div>
+          <div className="ideaName">
+            { idea }
+          </div>
+          </div>
     );
   }
 }
