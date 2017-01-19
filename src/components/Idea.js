@@ -14,7 +14,7 @@ class Idea extends Component {
 
         <Votes />
 
-      <Col xs={9}>
+      <Col xs={9} id="ideaName">
           <h4 className="topic-title">{this.props.ideaObject}</h4>
     </Col>
     </div>
