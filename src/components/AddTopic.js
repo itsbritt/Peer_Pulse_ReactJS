@@ -94,6 +94,7 @@ class AddTopic extends Component {
               placeholder="Add a suggestion" />
             </form>
 
+          <Welcome>
           <form>
             <input
               className="form-control"
@@ -125,14 +126,13 @@ class AddTopic extends Component {
               ref="idea5"
               placeholder="..." />
             </form>
-
+        </Welcome>
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="save btn btn-primary"
               type="submit"
               value="Save" />
           </form>
-
         </div>
       );
     }
