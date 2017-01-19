@@ -1,15 +1,15 @@
-About
+##About
 You are planning a day or night out with a person or group of people and the question arises: "What do you want to do?"
 
 PeerPulse allows a group of people to connect to
 
-Group Members
+##Group Members
 Britt Shroyer
 Stephanie Gage
 Stephanie Workman
 Vinh Huynh
 
-Technologies Implemented
+##Technologies Implemented
 ReactJS
 Firebase
 Bootstrap
