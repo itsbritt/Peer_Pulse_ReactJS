@@ -8,7 +8,6 @@ import { Link } from 'react-router';
 import Topics from './Topics';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Votes from './Votes';
 import UserPhoto from './UserPhoto';
 import { Scrollbars } from 'react-custom-scrollbars';
 
@@ -66,7 +65,7 @@ class Home extends Component {
       style={{ height: 200 }}>
       <div><Topics /></div>
       </Scrollbars>
-  <Votes />
+
     </Col>
       <Col xs={1}/>
 
