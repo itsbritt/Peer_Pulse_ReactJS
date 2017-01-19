@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { firebase } from '../utils/firebase';
 
 class Votes extends Component {
 
@@ -7,22 +7,31 @@ class Votes extends Component {
       super(props);
 
       this.state = {
-        voteCount: 0
+        votes: this.props.voteObject
       }
     }
 
-
   handleUpClick() {
-      this.setState({
-        voteCount: ++this.state.voteCount
+    var ideaId = this.props.ideaKey
+    var firebaseId = this.props.topicKey
+    var voteLocation = '/topics/' + firebaseId + '/idea/'+ideaId;
+    this.setState({
+      votes: ++this.state.votes
+    })
+
+    firebase.database()
+      .ref(voteLocation)
+      .update({
+        votes: this.state.votes,
       })
 
+console.log('the iddea is', voteLocation);
       // update in firebase
     }
 
   handleDownClick() {
       this.setState({
-        voteCount: --this.state.voteCount
+        votes: --this.state.votes
       })
     }
 

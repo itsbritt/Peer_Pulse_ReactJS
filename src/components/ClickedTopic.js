@@ -17,6 +17,7 @@ class ClickedTopic extends Component {
       topics: [],
       idea: []
     }
+        var firebaseId = this.props.params.id;
   }
 
   componentDidMount(){
@@ -47,21 +48,21 @@ class ClickedTopic extends Component {
                   self.setState({
                     idea: ideaCollection
                   });
-                  console.log('ideas are', self.state.idea);
+                  // console.log('ideas are', self.state.idea);
                 // }
           });
           // console.log('state of ideas is', self.state.idea);
           var votesRef = firebase.database().ref(voteLocation)
         .once("value", function(voteData) {
                   // const topicData = firebaseListToArray(data.val().userid);
-                  console.log("VOTES: ", voteData.val());
+                  // console.log("VOTES: ", voteData.val());
 
                   var voteCollection = voteData.val();
 
                     self.setState({
                       votes: voteCollection
                     });
-                    console.log('state of vote is', self.state.votes);
+                    // console.log('state of vote is', self.state.votes);
                   // }
             });
 // console.log("the idea is", topicsRef);
@@ -76,8 +77,8 @@ class ClickedTopic extends Component {
       return <Idea ideaObject={ ideas.idea } />
     });
     const votes = this.state.idea.map(ideas => {
-      console.log('votes are', ideas);
-      return <Votes voteObject={ ideas.votes } />
+      // console.log('votes are', ideas);
+      return <Votes ideaKey={ideas.key} topicKey={ this.props.params.id } voteObject={ ideas.votes } />
     });
 
     return (
