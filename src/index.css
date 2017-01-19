@@ -1,14 +1,14 @@
-#landingButton {
-  text-align: center;
-  margin: 25px 0 25px 0;
-  padding: 1px 10px;
-}
-.background {
+body {
   background: url('../images/background.png');
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
+}
+#landingButton {
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 1px 10px;
 }
 .header{
   font-family: 'Rubik', sans-serif;
@@ -36,6 +36,13 @@ h2.header{
 .tabs {
   margin: 50px 0;
 }
+.topicHeader{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
 .topic-title {
   font-family: 'Rubik',sans-serif;
   background-color: #FCFCFC;
@@ -49,7 +56,7 @@ h2.header{
   font-family: 'Rubik',sans-serif;
   border-radius: 5px;
   color: black;
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   text-align: center;
 }
@@ -58,21 +65,19 @@ h2.header{
   margin-top: 10px;
   border-radius: 5px;
  }
-#voteContainer {
-  float: left;
-  clear: left;
-  margin: 20px 0 0 25px;
-}
-#ideaName {
+.ideaName {
+  background-color: rgba(244,244,244,.6);
+  border-radius: 5px;
   clear: right;
-  margin-top: 33px;
+  margin: 35px 0 20px 0;
 }
-.topicHeader{
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+.idea-title-header {
+  font-family: 'Rubik',sans-serif;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
 }
 .userPhoto{
   max-width: 130px;
@@ -93,6 +98,11 @@ h2.header{
 }
 .save {
   margin: 8px;
+}
+.voteContainer {
+  float: left;
+  clear: left;
+  margin: 23px 0 0 25px;
 }
 p .voteIcon {
   font-size: 12px;
