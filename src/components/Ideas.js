@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
+import { firebase } from '../utils/firebase';
+import Idea from './Idea';
 
-import Topic from './Topic';
-import { firebase, firebaseListToArray } from '../utils/firebase';
-
-import { Link } from 'react-router';
-
+// import NavLink from './NavLink';
 
 class Ideas extends Component {
 
@@ -16,41 +14,51 @@ class Ideas extends Component {
     }
   }
 
-  componentWillMount() {
-    firebase.database()
-    .ref('/topics')
-    .on('value', data => {
-      const topicData = firebaseListToArray(data.val());
-      console.log('topic data: ', topicData);
+  componentDidMount() {
+    let self=this;
+    var topicsRef = firebase.database().ref("topics/");
 
-      this.setState({
-        topics: topicData
+      firebase.auth().onAuthStateChanged(function(userData){
+
+        topicsRef.orderByChild("userid").equalTo(userData.uid).once("value", function(data) {
+              // const topicData = firebaseListToArray(data.val().userid);
+              // console.log("Equal to filter: ", data.val());
+
+              var topicCollection = data.val();
+
+              for(let key in topicCollection){
+                topicCollection[key].uniqueKey = key;
+                // console.log('key: ',topicCollection[key].uniqueKey);
+                self.setState({
+                  topics: self.state.topics.concat(topicCollection[key])
+                });
+// console.log('state is', self.state.topics);
+              }
+        });
       })
-    });
-  }
+    }
 
-  handleUpClick() {
-    this.setState({
-      voteCount: this.state.voteCount++
-    })
-  }
 
   render() {
+    // console.log("this.state.topic.ideas", this.state.topics);
     const topics = this.state.topics.map(topic => {
-      return (
-
-          <Topic key={ topic.id} title={ topic.idea[0] } />
-      );
+// console.log('topic is', topic);
+      return <Idea keyObject={ this.props.children } ideaObject={ topic } />
     })
 
     return (
-      <section id="topics" className="container-fluid">
+      <section id="topicsDiv" className="container-fluid">
+
         <div className="row">
-          { topics }
+
+        { topics }
+
+
         </div>
       </section>
     )
   }
+
 }
 
 export default Ideas;

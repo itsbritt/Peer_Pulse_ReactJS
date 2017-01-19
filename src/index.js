@@ -7,6 +7,7 @@ import DisplayTopics from './components/DisplayTopics';
 
 import ClickedTopic from './components/ClickedTopic';
 
+
 dotenv.config({ silent: true });
 
 import App from './App';
