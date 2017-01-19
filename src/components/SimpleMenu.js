@@ -21,7 +21,7 @@ class SimpleMenu extends Component {
       <MenuItem />
       <MenuItem primaryText="Help" />
       <LogoutButton>
-      <MenuItem primaryText="Sign out" />
+      <MenuItem primaryText="Sign Out" style={{color: 'white'}}/>
     </LogoutButton>
     </div>
     </IconMenu>
