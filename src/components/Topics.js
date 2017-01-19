@@ -36,18 +36,10 @@ class Topics extends Component {
       })
     }
 
-  // handleRedirect() {
-  //   window.location = '/#/ideas';
-  // }
-  // <button onClick={this.handleRedirect.bind(this)}>Edit</button>
-
-
-  // I need to pass in a prop that houses the ideas ideas={topic.idea}
-
 
   render() {
     const topics = this.state.topics.map(topic => {
-      return <Topic key={ topic.uniqueKey } titleObject={ topic } />
+      return <Topic keyObject={ topic.uniqueKey } titleObject={ topic } />
     })
 
     return (

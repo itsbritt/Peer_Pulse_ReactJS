@@ -21,7 +21,7 @@ ReactDOM.render(
       <Route path="/home" component={ Home }/>
       <Route path="/add" component={ AddTopic }/>
       <Route path="/mytopics" component={DisplayTopics} />
-      <Route path="/ideas/:id" component={ClickedTopic}  />
+      <Route path="/ideas/:id" component={ClickedTopic} />
   </Router>,
   document.getElementById('root')
 );
