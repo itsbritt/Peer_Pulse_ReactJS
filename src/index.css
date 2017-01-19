@@ -99,7 +99,7 @@ h2.header{
 }
 .ideasContainer {
   overflow: hidden;
-  margin: 0 auto;
+  padding: -10px 0 0 0;
   background-color: rgba(244,244,244,.6);
 }
 .userPhoto{

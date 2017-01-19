@@ -89,7 +89,7 @@ class ClickedTopic extends Component {
         </div>
 
         <h1>{ topics }</h1>
-        <div className="ideasContainer">
+        <div className="col-xs-12 ideasContainer">
           <div className="voteContainer">
             { votes }
           </div>
