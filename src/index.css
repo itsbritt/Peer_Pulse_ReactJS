@@ -1,14 +1,31 @@
-#landingButton {
-  text-align: center;
-  margin: 25px 0 25px 0;
-  padding: 1px 10px;
-}
-.background {
+body {
   background: url('../images/background.png');
   width: 100%;
   height: 100vh;
   background-size: cover;
   background-position: center;
+}
+a {
+  color: #26547C;
+}
+a:hover {
+  color: #E9168C;
+  text-decoration: none;
+}
+.landingButton {
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 1px 10px;
+  background-color: #26547C;
+}
+.landingbutton:hover {
+  background-color: #011627;
+}
+.newProjectBtn {
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 1px 10px;
+  background-color: #26547C;
 }
 .header{
   font-family: 'Rubik', sans-serif;
@@ -36,6 +53,13 @@ h2.header{
 .tabs {
   margin: 50px 0;
 }
+.topicHeader{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
 .topic-title {
   font-family: 'Rubik',sans-serif;
   background-color: #FCFCFC;
@@ -43,22 +67,87 @@ h2.header{
   color: black;
   font-size: 17px;
   padding: 10px;
+  text-align: center;
+}
+.topic-title-header {
+  font-family: 'Rubik',sans-serif;
+  border-radius: 5px;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
 }
 #topicsDiv {
   background-color: rgba(244,244,244,.6);
   margin-top: 10px;
   border-radius: 5px;
  }
-.topicHeader{
-  height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
+.ideaName {
+  border-radius: 5px;
+  clear: right;
+  margin: 20px 0 20px 0;
+}
+.idea-title-header {
+  background-color: rgba(244,244,244,.6);
+  font-family: 'Rubik',sans-serif;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px;
+  margin: 25px 0 -10px -8px;
+}
+.ideasContainer {
+  overflow: hidden;
+  padding: -10px 0 0 0;
+  background-color: rgba(244,244,244,.6);
 }
 .userPhoto{
   max-width: 130px;
   margin-top: 10px;
   background-color: white;
   padding: 3px;
+}
+.add-topic-info {
+  font-family: 'Rubik',sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.form-control {
+  margin: 8px;
+  max-width: 375px;
+}
+.save {
+  margin: 8px;
+  background-color: #26547C;
+}
+.voteContainer {
+  float: left;
+  clear: left;
+  margin: 25px 0 0 25px;
+}
+.upVoteIcon {
+  font-size: 15px;
+  margin: 2px;
+}
+.upVoteIcon:hover {
+  font-size: 15px;
+  margin: 2px;
+  color: #3E88FB;
+}
+.downVoteIcon {
+  font-size: 15px;
+  margin: 2px;
+}
+.downVoteIcon:hover {
+  color: #F67445;
+}
+.upVoteText {
+  font-size: 15px;
+  margin: -8px 0 -8px 5px;
+}
+.signOutColor {
+  background-color: #26547C;
 }

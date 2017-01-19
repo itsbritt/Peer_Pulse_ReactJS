@@ -83,20 +83,22 @@ class ClickedTopic extends Component {
 
     return (
       <div>
-
-<div>
-  <MuiThemeProvider>
-    <SimpleMenu />
-  </MuiThemeProvider>
-</div>
-<h1>{ topics }</h1>
         <div>
-          { votes }
+          <MuiThemeProvider>
+            <SimpleMenu />
+          </MuiThemeProvider>
+        </div>
 
-
-{ idea }
-      </div>
-      </div>
+        <h1>{ topics }</h1>
+        <div className="col-xs-12 ideasContainer">
+          <div className="voteContainer">
+            { votes }
+          </div>
+          <div className="ideaName">
+            { idea }
+          </div>
+        </div>
+        </div>
     );
   }
 }

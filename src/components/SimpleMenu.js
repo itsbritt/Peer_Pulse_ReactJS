@@ -15,13 +15,15 @@ class SimpleMenu extends Component {
       anchorOrigin={{horizontal: 'left', vertical: 'top'}}
       targetOrigin={{horizontal: 'left', vertical: 'top'}}
     >
+      <div className='centeredContainer'>
       <Link to="/home"><MenuItem primaryText="Home" /></Link>
       <Link to="/add"><MenuItem primaryText="Add Project" /></Link>
       <MenuItem />
       <MenuItem primaryText="Help" />
       <LogoutButton>
-      <MenuItem primaryText="Sign out" />
+      <MenuItem primaryText="Sign Out" style={{color: 'white'}}/>
     </LogoutButton>
+    </div>
     </IconMenu>
   </div>
     )

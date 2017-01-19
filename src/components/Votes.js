@@ -39,17 +39,14 @@ console.log('the iddea is', voteLocation);
       // I want to get the topic with id of: this.props.params.id
 
       return (
-        <div>
-        <h3 onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</h3>
-         <h1 className="upVote" >{this.state.votes}</h1>
-         <h3 onClick={ this.handleDownClick.bind(this)}>▼</h3>
-          <div className="topicHeader">
 
-          </div>
+        <div className='voteContainer'>
+        <p className="upVoteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
+         <h1 className="upVoteText" >{this.props.voteObject}</h1>
+         <p className="downVoteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
         </div>
     )
   }
-
 }
 
 export default Votes;
