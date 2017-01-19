@@ -59,10 +59,11 @@ class AddTopic extends Component {
 
     render() {
       return (
-        <div>
+        <div className="background">
           <MuiThemeProvider>
             <SimpleMenu />
           </MuiThemeProvider>
+
           <p className="add-topic-info">What's the plan?</p>
           <form>
             <input
@@ -119,6 +120,7 @@ class AddTopic extends Component {
               type="submit"
               value="Save" />
           </form>
+
         </div>
       );
     }
