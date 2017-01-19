@@ -5,26 +5,23 @@ body {
   background-size: cover;
   background-position: center;
 }
-a{
+a {
   color: #26547C;
 }
 a:hover {
   color: #E9168C;
   text-decoration: none;
 }
-#landingButton {
+.landingButton {
   text-align: center;
   margin: 25px 0 25px 0;
   padding: 1px 10px;
   background-color: #26547C;
 }
-/*a:hover #landingbutton {
-  text-align: center;
-  margin: 25px 0 25px 0;
-  padding: 1px 10px;
-  background-color: rgba(41,47,54,0.5);
-}*/
-#newProjectBtn {
+.landingbutton:hover {
+  background-color: #011627;
+}
+.newProjectBtn {
   text-align: center;
   margin: 25px 0 25px 0;
   padding: 1px 10px;
