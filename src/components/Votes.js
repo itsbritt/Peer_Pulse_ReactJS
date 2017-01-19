@@ -7,7 +7,7 @@ class Votes extends Component {
       super(props);
 
       this.state = {
-        voteCount: 1
+        voteCount: 0
       }
     }
 
@@ -16,6 +16,8 @@ class Votes extends Component {
       this.setState({
         voteCount: ++this.state.voteCount
       })
+
+      // update in firebase
     }
 
   handleDownClick() {
@@ -30,7 +32,7 @@ class Votes extends Component {
       return (
         <div>
         <h3 onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</h3>
-         <h1 className="upVote" >{this.state.voteCount}</h1>
+         <h1 className="upVote" >{this.props.voteObject}</h1>
          <h3 onClick={ this.handleDownClick.bind(this)}>▼</h3>
           <div className="topicHeader">
 
