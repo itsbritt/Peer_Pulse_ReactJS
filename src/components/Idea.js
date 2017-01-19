@@ -11,7 +11,7 @@ class Idea extends Component {
 
     return (
       <div id="topicsDiv">
-  
+
         <Votes />
 
       <Col xs={9}>
