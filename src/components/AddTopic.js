@@ -5,6 +5,8 @@ import { hashHistory } from 'react-router';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
+import * as randKey from 'random-key';
+
 class AddTopic extends Component {
   constructor(props) {
     super(props);
@@ -29,11 +31,12 @@ class AddTopic extends Component {
     const idea5 = this.refs.idea5.value;
 
     // TAKE FORM DATA AN ADD IT TO AN ARRAY RESPECTIVELY
-    const newArr = [{idea: idea1, votes: 0},
-                    {idea: idea2, votes: 0},
-                    {idea: idea3, votes: 0},
-                    {idea: idea4, votes: 0},
-                    {idea: idea5, votes: 0}
+    const newArr = [
+                    {idea: idea1, votes: 0, key: randKey.generate()},
+                    {idea: idea2, votes: 0, key: randKey.generate()},
+                    {idea: idea3, votes: 0, key: randKey.generate()},
+                    {idea: idea4, votes: 0, key: randKey.generate()},
+                    {idea: idea5, votes: 0, key: randKey.generate()},
                     ]
 
     const validEntry = [];
@@ -66,6 +69,7 @@ class AddTopic extends Component {
   }
 
     render() {
+      console.log( 'key:  : b b   ', randKey.generate() )
       return (
         <div className="background">
           <MuiThemeProvider>
