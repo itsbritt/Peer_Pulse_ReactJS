@@ -13,7 +13,7 @@ class LogoutButton extends Component {
     return (
       <button
         onClick={ this.handleClick.bind(this) }
-        className="btn">{ this.props.children }</button>
+        className="btn signOutColor">{ this.props.children }</button>
     )
   }
 }
