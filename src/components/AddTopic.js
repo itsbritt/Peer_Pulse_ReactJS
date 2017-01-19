@@ -28,11 +28,18 @@ class AddTopic extends Component {
     const idea5 = this.refs.idea5.value;
 
     const newArr = [idea1, idea2, idea3, idea4, idea5]
+    const validEntry = [];
+
+    for (var i=0; i<newArr.length; i++) {
+      if (newArr[i].length >= 1 && newArr[i] !== '') {
+        validEntry.push(newArr[i])
+      }
+    }
 
     topicsRef.orderByChild("title").equalTo(topicTitle).once("value",(data)=>{
       for (let theKey in data.val()) {
         console.log('key is: ', theKey);
-        topicsRef.child(theKey).update({ "idea": newArr })
+        topicsRef.child(theKey).update({ "idea": validEntry })
       }
     });
 
