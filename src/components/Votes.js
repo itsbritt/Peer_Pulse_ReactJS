@@ -39,7 +39,6 @@ class Votes extends Component {
         </div>
     )
   }
-
 }
 
 export default Votes;
