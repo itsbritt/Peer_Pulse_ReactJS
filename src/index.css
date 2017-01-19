@@ -62,3 +62,17 @@ h2.header{
   background-color: white;
   padding: 3px;
 }
+.add-topic-info {
+  font-family: 'Rubik',sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.form-control {
+  margin: 8px;
+  max-width: 375px;
+}
+.save {
+  margin: 8px;
+}
