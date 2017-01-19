@@ -47,7 +47,9 @@ h2.header{
 #topicsDiv {
   background-color: white;
   margin-top: 10px;
-}
+  border-radius: 5px;
+ }
+
 .topicHeader{
   height: 20vh;
   display: flex;
@@ -61,6 +63,10 @@ h2.header{
   background-color: white;
   padding: 3px;
 }
+.form-control {
+  margin: 5px;
+}
+
 .btn-primary {
   margin: 10px;
 }

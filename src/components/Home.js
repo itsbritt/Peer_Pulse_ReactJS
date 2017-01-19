@@ -10,6 +10,7 @@ import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Votes from './Votes';
 import UserPhoto from './UserPhoto';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 // import Upvote from 'react-upvote';
 
@@ -46,7 +47,6 @@ class Home extends Component {
 
     return (
       <div className="background">
-
       <div>
       <MuiThemeProvider>
         <SimpleMenu />
@@ -62,7 +62,10 @@ class Home extends Component {
       <Button className="btn btn-primary" id="landingButton">
         <Link to="/add"><h2 className="header">new project</h2></Link>
       </Button>
-      <Topics />
+      <Scrollbars
+      style={{ height: 200 }}>
+      <div><Topics /></div>
+      </Scrollbars>
   <Votes />
     </Col>
       <Col xs={1}/>
