@@ -58,6 +58,21 @@ h2.header{
   margin-top: 10px;
   border-radius: 5px;
  }
+
+.upVote {
+  margin: 0;
+}
+
+#voteContainer {
+  float: left;
+  clear: left;
+}
+
+#ideaName {
+  clear: right;
+  padding-top: 50px;
+}
+
 .topicHeader{
   height: 20vh;
   display: flex;
