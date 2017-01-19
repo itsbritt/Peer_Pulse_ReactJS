@@ -7,7 +7,7 @@ class Votes extends Component {
       super(props);
 
       this.state = {
-        voteCount: 1
+        voteCount: 0
       }
     }
 
@@ -16,6 +16,8 @@ class Votes extends Component {
       this.setState({
         voteCount: ++this.state.voteCount
       })
+
+      // update in firebase
     }
 
   handleDownClick() {
@@ -28,10 +30,12 @@ class Votes extends Component {
       // I want to get the topic with id of: this.props.params.id
 
       return (
+
         <div id='voteContainer'>
         <p className="voteIcon" onClick={this.upvote} onClick={ this.handleUpClick.bind(this)}>▲</p>
-         <h1 className="upVoteText" >{this.state.voteCount}</h1>
+         <h1 className="upVoteText" >{this.props.voteObject}</h1>
          <p className="voteIcon" onClick={ this.handleDownClick.bind(this)}>▼</p>
+
         </div>
     )
   }

@@ -21,17 +21,25 @@ class AddTopic extends Component {
     const topicTitle = this.refs.topicTitle.value;
     const userid = firebase.auth().currentUser.uid
 
+    // GET DATA FROM 5 FORMS
     const idea1 = this.refs.idea1.value;
     const idea2 = this.refs.idea2.value;
     const idea3 = this.refs.idea3.value;
     const idea4 = this.refs.idea4.value;
     const idea5 = this.refs.idea5.value;
 
-    const newArr = [idea1, idea2, idea3, idea4, idea5]
+    // TAKE FORM DATA AN ADD IT TO AN ARRAY RESPECTIVELY
+    const newArr = [{idea: idea1, votes: 0},
+                    {idea: idea2, votes: 0},
+                    {idea: idea3, votes: 0},
+                    {idea: idea4, votes: 0},
+                    {idea: idea5, votes: 0}
+                    ]
+
     const validEntry = [];
 
     for (var i=0; i<newArr.length; i++) {
-      if (newArr[i].length >= 1 && newArr[i] !== '') {
+      if (newArr[i].idea.length >= 1 && newArr[i].idea !== '') {
         validEntry.push(newArr[i])
       }
     }
