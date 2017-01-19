@@ -5,7 +5,9 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+a{
+  color: #26547C;
+}
 a:hover {
   color: #E9168C;
   text-decoration: none;
@@ -121,6 +123,7 @@ h2.header{
 }
 .save {
   margin: 8px;
+  background-color: #26547C;
 }
 .voteContainer {
   float: left;
