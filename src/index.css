@@ -5,10 +5,28 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+a:hover {
+  color: #E9168C;
+  text-decoration: none;
+}
 #landingButton {
   text-align: center;
   margin: 25px 0 25px 0;
   padding: 1px 10px;
+  background-color: #26547C;
+}
+/*a:hover #landingbutton {
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 1px 10px;
+  background-color: rgba(41,47,54,0.5);
+}*/
+#newProjectBtn {
+  text-align: center;
+  margin: 25px 0 25px 0;
+  padding: 1px 10px;
+  background-color: #26547C;
 }
 .header{
   font-family: 'Rubik', sans-serif;
@@ -66,18 +84,23 @@ h2.header{
   border-radius: 5px;
  }
 .ideaName {
-  background-color: rgba(244,244,244,.6);
   border-radius: 5px;
   clear: right;
-  margin: 35px 0 20px 0;
+  margin: 20px 0 20px 0;
 }
 .idea-title-header {
+  background-color: rgba(244,244,244,.6);
   font-family: 'Rubik',sans-serif;
   border-radius: 5px;
   color: black;
   font-size: 15px;
+  text-align: left;
   padding: 10px;
-  text-align: center;
+  margin: 25px 0 -10px -8px;
+}
+.ideasContainer {
+  overflow: hidden;
+  background-color: rgba(244,244,244,.6);
 }
 .userPhoto{
   max-width: 130px;
@@ -102,13 +125,22 @@ h2.header{
 .voteContainer {
   float: left;
   clear: left;
-  margin: 23px 0 0 25px;
+  margin: 25px 0 0 25px;
 }
-p .voteIcon {
-  font-size: 12px;
+.upVoteIcon {
+  font-size: 15px;
+  margin: 2px;
+}
+/*a:hover .upVoteIcon {
+  font-size: 15px;
+  margin: 2px;
+  color: #3E88FB;
+}*/
+.downVoteIcon {
+  font-size: 15px;
   margin: 2px;
 }
 .upVoteText {
-  font-size: 20px;
-  margin: 0;
+  font-size: 15px;
+  margin: -8px 0 -8px 5px;
 }
