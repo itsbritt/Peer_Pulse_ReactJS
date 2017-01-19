@@ -100,7 +100,7 @@ h2.header{
 .ideasContainer {
   overflow: hidden;
   padding: -10px 0 0 0;
-  background-color: rgba(244,244,244,.6);
+  /*background-color: rgba(244,244,244,.6);*/
 }
 .userPhoto{
   max-width: 130px;
