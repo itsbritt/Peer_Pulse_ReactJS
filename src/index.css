@@ -99,6 +99,7 @@ h2.header{
 }
 .ideasContainer {
   overflow: hidden;
+  margin: 0 auto;
   background-color: rgba(244,244,244,.6);
 }
 .userPhoto{
@@ -131,14 +132,17 @@ h2.header{
   font-size: 15px;
   margin: 2px;
 }
-/*a:hover .upVoteIcon {
+.upVoteIcon:hover {
   font-size: 15px;
   margin: 2px;
   color: #3E88FB;
-}*/
+}
 .downVoteIcon {
   font-size: 15px;
   margin: 2px;
+}
+.downVoteIcon:hover {
+  color: #F67445;
 }
 .upVoteText {
   font-size: 15px;
