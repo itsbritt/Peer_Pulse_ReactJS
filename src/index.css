@@ -1,6 +1,7 @@
 #landingButton {
   text-align: center;
-  margin: 30px 0 25px 0;
+  margin: 25px 0 25px 0;
+  padding: 1px 10px;
 }
 .background {
   background: url('../images/background.png');
@@ -32,24 +33,22 @@ h2.header{
   margin-bottom: 20px;
   width: 100%;
 }
-
 .tabs {
   margin: 50px 0;
 }
-
 .topic-title {
   font-family: 'Rubik',sans-serif;
-  /*font-weight: lighter;*/
+  background-color: #FCFCFC;
+  border-radius: 5px;
   color: black;
-  font-size: 18px;
-  padding: 3px;
+  font-size: 17px;
+  padding: 10px;
 }
 #topicsDiv {
-  background-color: white;
+  background-color: rgba(244,244,244,.6);
   margin-top: 10px;
   border-radius: 5px;
  }
-
 .topicHeader{
   height: 20vh;
   display: flex;
@@ -62,11 +61,4 @@ h2.header{
   margin-top: 10px;
   background-color: white;
   padding: 3px;
-}
-.form-control {
-  margin: 5px;
-}
-
-.btn-primary {
-  margin: 10px;
 }
