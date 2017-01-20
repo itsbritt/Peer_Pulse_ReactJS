@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
 import * as randKey from 'random-key';
 import { Col } from 'react-bootstrap';
-
+import Button from 'muicss/lib/react/button';
 class AddTopic extends Component {
   constructor(props) {
     super(props);
@@ -134,13 +134,13 @@ class AddTopic extends Component {
               placeholder="..." />
             </form>
         </Welcome>
+          <Button className="saveButton">
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
-              className="save btn btn-primary"
               type="submit"
               value="Save" />
           </form>
-
+</Button>
         </Col>
         <Col xs={1}/>
 
