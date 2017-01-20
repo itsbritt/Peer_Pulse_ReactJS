@@ -5,14 +5,14 @@ PeerPulse is a solution to that problematic question!
 A member of the group creates a question and then shares it with others to get feedback by having others vote for their favorite option.
 
 ###Group Members
-Britt Shroyer
-Stephanie Gage
-Stephanie Workman
+Britt Shroyer<br />
+Stephanie Gage<br />
+Stephanie Workman<br />
 Vinh Huynh
 
 ###Technologies Implemented
-ReactJS
-Firebase
-Bootstrap
-Mui Theme Provider (http://www.material-ui.com/v0.15.0-beta.2)
+ReactJS<br />
+Firebase<br />
+Bootstrap<br />
+Mui Theme Provider (http://www.material-ui.com/v0.15.0-beta.2)<br />
 react-custom-scrollbars (https://react.rocks/example/react-custom-scrollbars)
