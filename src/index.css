@@ -102,7 +102,7 @@ h2.header{
   font-size: 15px;
   text-align: left;
   padding: 10px;
-  margin: 25px 0 -10px -8px;
+  margin: 25px -55px -10px -8px;
 }
 .ideasContainer {
   overflow: hidden;
@@ -222,7 +222,19 @@ h2.header{
 .well {
   margin-bottom: 0;
 }
+
 .deadline{
   font-size: 15px;
   color: #26547c;
+}
+#loginButton {
+  margin: 100px, 100px, 100px, 100px;
+  color: 'white';
+}
+.saveButton {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 0;
+  background-color: #78909B;
+  color: #ffffff;
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import { firebase } from '../utils/firebase';
-
+import Button from 'muicss/lib/react/button';
+import { Col } from 'react-bootstrap';
 class LoginButton extends Component {
   handleClick(e) {
     e.preventDefault();
@@ -14,8 +15,15 @@ class LoginButton extends Component {
 
   render() {
     return (
-      <button onClick={ this.handleClick.bind(this) }
-        className="btn">{ this.props.children }</button>
+      <div>
+      <Col xs={2}/>
+      <Col xs={10}>
+        <br/>
+        <br/>
+      <Button onClick={ this.handleClick.bind(this) }
+        id="loginButton" className="landingButton centeredContainer">{ this.props.children }</Button>
+      </Col>
+    </div>
     )
   }
 }
