@@ -165,18 +165,6 @@ h2.header{
 .signOutColor {
   background-color: #26547C;
 }
-
-.calendar {
-  display: flex;
-  justify-content: center;
-}
-.expiration{
-  display: block;
-  text-align: center;
-  width: 200px;
-  margin: 0 auto;
-  padding-top: 100px;
-}
 .menuButto:hover {
   background-color: #011627;
 }
@@ -196,9 +184,7 @@ h2.header{
   text-align: center;
   font-size: 50px;
 }
-.background {
-  background-color: white;
-}
+
 .mui-textfield>input, .mui-textfield>textarea {
   padding-left: 10px;
 }
@@ -211,9 +197,4 @@ h2.header{
 #noPadding {
   padding-top: 0px;
   padding-bottom: 0px;
-
-}
-.deadline{
-  display: block;
-  padding-top: 30px;
 }
