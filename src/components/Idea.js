@@ -15,6 +15,7 @@ class Idea extends Component {
       <Col xs={9} className="ideaName">
           <h4 className="idea-title-header">{this.props.ideaObject}</h4>
     </Col>
+
     </div>
     );
   }

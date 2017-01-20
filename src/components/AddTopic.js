@@ -5,6 +5,7 @@ import { hashHistory } from 'react-router';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
+import * as randKey from 'random-key';
 
 
 import moment from 'moment';
@@ -87,7 +88,6 @@ class AddTopic extends Component {
       .ref('/topics')
       .push({
         title: topicTitle,
-        // description: description,
         time: this.state.time,
         idea: newArr,
         userid: userid
@@ -96,8 +96,6 @@ class AddTopic extends Component {
         hashHistory.push('/home');
       });
   }
-
-
 
     render() {
 

@@ -161,3 +161,11 @@ h2.header{
   display: flex;
   justify-content: center;
 }
+.expiration{
+  display: block;
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 100px;
+
+}
