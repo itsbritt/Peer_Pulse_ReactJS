@@ -77,10 +77,12 @@ class AddTopic extends Component {
           <MuiThemeProvider>
             <SimpleMenu />
           </MuiThemeProvider>
+
                   <div className="centerItems">
     <Col xs={1}/>
     <Col xs={10}>
           <p className="add-topic-info">What's the topic?</p>
+
           <form>
             <input
               className="form-control"
@@ -141,7 +143,7 @@ class AddTopic extends Component {
         <Col xs={1}/>
 
         </div>
-      </div>
+</div>
       );
     }
   }
