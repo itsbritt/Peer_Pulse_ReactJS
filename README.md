@@ -14,5 +14,5 @@ A member of the group creates a question and then shares it with others to get f
 ReactJS<br />
 Firebase<br />
 Bootstrap<br />
-Mui Theme Provider (http://www.material-ui.com/v0.15.0-beta.2)<br />
-react-custom-scrollbars (https://react.rocks/example/react-custom-scrollbars)
+[Mui Theme Provider](http://www.material-ui.com/v0.15.0-beta.2)<br />
+[react-custom-scrollbars](https://react.rocks/example/react-custom-scrollbars)
