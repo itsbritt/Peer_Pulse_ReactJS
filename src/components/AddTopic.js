@@ -6,6 +6,7 @@ import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
 import * as randKey from 'random-key';
+
 import moment from 'moment';
 import { render } from 'react-dom';
 import InfiniteCalendar from 'react-infinite-calendar';
@@ -14,6 +15,9 @@ import 'react-infinite-calendar/styles.css'; // only needs to be imported once
 // Render the Calendar
 var today = new Date();
 var minDate = Number(new Date()) - (24*60*60*1000) * 7;
+
+import { Col } from 'react-bootstrap';
+
 
 class AddTopic extends Component {
 
@@ -86,67 +90,73 @@ class AddTopic extends Component {
     render() {
 
       return (
-        <div className="background">
+    <div>
+    <MuiThemeProvider>
+      <SimpleMenu />
+    </MuiThemeProvider>
 
-          <MuiThemeProvider>
-            <SimpleMenu />
-          </MuiThemeProvider>
+      <div className="centerItems">
+  <Col xs={1}/>
+  <Col xs={10}>
+    <p className="add-topic-info">What's the Topic?</p>
 
-          <p className="add-topic-info">Whats the plan?</p>
-          <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="topicTitle"
-              placeholder="Add an Activity &raquo; ex: Where to eat?" />
+    <form>
+      <input
+        className="form-control"
+        type="text"
+        ref="topicTitle"
+        placeholder="Add an Activity &raquo; ex: Where to eat?" />
+    </form>
+
+    <p className="add-topic-info">Decision Deadline</p>
+    <div className='calendar'>
+    <InfiniteCalendar>
+      width={325}
+      height={250}
+      onSelect={this.handleSelectDate.bind(this)}
+      selectedDate={today}
+      disabledDays={[0,6]}
+      minDate={minDate}
+      keyboardSupport={true}
+    </InfiniteCalendar>
+    </div>
+
+
+    <p className="add-topic-info">Add some ideas:</p>
+
+    <form>
+        <input
+        className="form-control"
+        type="text"
+        ref="idea1"
+        placeholder="Add an idea" />
+    </form>
+
+    <Welcome>
+    <form>
+      <input
+        className="form-control"
+        type="text"
+        ref="idea2"
+        placeholder="... " />
+      </form>
+
+
+      <form>
+        <input
+          className="form-control"
+          type="text"
+          ref="idea3"
+          placeholder="..." />
+        </form>
+
+        <form>
+          <input
+            className="form-control"
+            type="text"
+            ref="idea4"
+            placeholder="..." />
           </form>
-
-          <p className="add-topic-info">Decision Deadline</p>
-          <div className='calendar'>
-          <InfiniteCalendar
-            width={325}
-            height={250}
-            onSelect={this.handleSelectDate.bind(this)}
-            selectedDate={today}
-            disabledDays={[0,6]}
-            minDate={minDate}
-            keyboardSupport={true}
-          />
-          </div>
-
-            <p className="add-topic-info">Add some suggestions:</p>
-              <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="idea1"
-              placeholder="Add a suggestion" />
-            </form>
-
-          <Welcome>
-          <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="idea2"
-              placeholder="... " />
-            </form>
-
-          <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="idea3"
-              placeholder="..." />
-            </form>
-
-          <form>
-            <input
-              className="form-control"
-              type="text"
-              ref="idea4"
-              placeholder="..." />
-            </form>
 
           <form>
             <input
@@ -156,15 +166,24 @@ class AddTopic extends Component {
               placeholder="..." />
             </form>
         </Welcome>
-            <form onSubmit={ this.handleSubmit.bind(this) }>
-            <input
-              className="save btn btn-primary"
-              type="submit"
-              value="Save" />
-          </form>
-        </div>
-      );
-    }
-  }
+
+        <form onSubmit={ this.handleSubmit.bind(this) }>
+        <input
+          className="save btn btn-primary"
+          type="submit"
+          value="Save" />
+      </form>
+      </Col>
+      <Col xs={1}/>
+
+      </div>
+    </div>
+  )
+}
+}
+
+
+
+
 
   export default AddTopic;

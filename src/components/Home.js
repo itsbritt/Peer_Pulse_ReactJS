@@ -47,7 +47,7 @@ class Home extends Component {
       '';
 
     return (
-      <div className="background">
+      <div>
       <div>
       <MuiThemeProvider>
         <SimpleMenu />
