@@ -172,8 +172,8 @@ class AddTopic extends Component {
               placeholder="..." />
             </form>
         </Welcome>
-          <Button className="saveButton">
-            <form onSubmit={ this.handleSubmit.bind(this) }>
+          <Button className="saveButton" onClick={ this.handleSubmit.bind(this) }>
+            <form>
             <input
               type="submit"
               value="Save" />
