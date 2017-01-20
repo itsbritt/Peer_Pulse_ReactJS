@@ -5,13 +5,42 @@ import { hashHistory } from 'react-router';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
+
+import moment from 'moment';
+
+
+
+
+
+import { render } from 'react-dom';
+import InfiniteCalendar from 'react-infinite-calendar';
+import 'react-infinite-calendar/styles.css'; // only needs to be imported once
+
+// Render the Calendar
+var today = new Date();
+var minDate = Number(new Date()) - (24*60*60*1000) * 7;
+
+
+
 class AddTopic extends Component {
+
   constructor(props) {
     super(props);
 
     this.state = {
       topic: {}
     }
+  }
+  handleSelectDate(date) {
+
+    console.log('the selected date is: ', date);
+    console.log('unix timestamp:', moment(date).unix());
+    this.setState({
+      time: moment(date).unix()
+    })
+
+
+
   }
 
   handleSubmit(e) {
@@ -47,6 +76,7 @@ class AddTopic extends Component {
     topicsRef.orderByChild("title").equalTo(topicTitle).once("value",(data)=>{
       for (let theKey in data.val()) {
         console.log('key is: ', theKey);
+
         topicsRef.child(theKey).update({ "idea": validEntry })
       }
     });
@@ -56,8 +86,8 @@ class AddTopic extends Component {
       .push({
         title: topicTitle,
         // description: description,
+        time: this.state.time,
         idea: newArr,
-        date: Math.floor(Date.now() / 1000),
         userid: userid
       }).then(data => {
         // redirects you back to home
@@ -65,9 +95,13 @@ class AddTopic extends Component {
       });
   }
 
+
+
     render() {
+
       return (
         <div className="background">
+
           <MuiThemeProvider>
             <SimpleMenu />
           </MuiThemeProvider>
@@ -80,6 +114,19 @@ class AddTopic extends Component {
               ref="topicTitle"
               placeholder="Add an Activity &raquo; ex: Where to eat?" />
           </form>
+
+          <p className="add-topic-info">Decision Deadline</p>
+          <div className='calendar'>
+          <InfiniteCalendar
+            width={325}
+            height={250}
+            onSelect={this.handleSelectDate.bind(this)}
+            selectedDate={today}
+            disabledDays={[0,6]}
+            minDate={minDate}
+            keyboardSupport={true}
+          />
+          </div>
 
             <p className="add-topic-info">Add some suggestions:</p>
               <form>

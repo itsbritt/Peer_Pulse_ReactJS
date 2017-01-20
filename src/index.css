@@ -102,3 +102,7 @@ p .voteIcon {
   font-size: 20px;
   margin: 0;
 }
+.calendar {
+  display: flex;
+  justify-content: center;
+}
