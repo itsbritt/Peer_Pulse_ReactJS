@@ -5,6 +5,7 @@ import { hashHistory } from 'react-router';
 import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
+import DateSelect from './DateSelect';
 import * as randKey from 'random-key';
 
 import moment from 'moment';
@@ -88,8 +89,8 @@ class AddTopic extends Component {
   }
 
     render() {
-
       return (
+
     <div>
     <MuiThemeProvider>
       <SimpleMenu />
@@ -109,11 +110,11 @@ class AddTopic extends Component {
     </form>
 
     <p className="add-topic-info">Decision Deadline</p>
-
+    <DateSelect>
     <div className='calendar'>
     <InfiniteCalendar
-      width={325}
-      height={250}
+      width={245}
+      height={180}
       onSelect={this.handleSelectDate.bind(this)}
       selectedDate={today}
       disabledDays={[0,6]}
@@ -121,6 +122,7 @@ class AddTopic extends Component {
       keyboardSupport={true}
         />
     </div>
+    </DateSelect>
 
 
     <p className="add-topic-info">Add some ideas:</p>
@@ -158,7 +160,6 @@ class AddTopic extends Component {
             ref="idea4"
             placeholder="..." />
           </form>
-
           <form>
             <input
               className="form-control"
@@ -168,14 +169,15 @@ class AddTopic extends Component {
             </form>
         </Welcome>
 
-        <form onSubmit={ this.handleSubmit.bind(this) }>
-        <input
-          className="save btn btn-primary"
-          type="submit"
-          value="Save" />
-      </form>
-      </Col>
-      <Col xs={1}/>
+            <form onSubmit={ this.handleSubmit.bind(this) }>
+            <input
+              className="save btn btn-primary"
+              type="submit"
+              value="Save" />
+          </form>
+
+        </Col>
+        <Col xs={1}/>
 
       </div>
     </div>

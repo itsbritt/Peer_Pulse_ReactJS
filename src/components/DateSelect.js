@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Collapse, Well } from 'react-bootstrap';
 
-class Welcome extends Component{
+class DateSelect extends Component{
   constructor(...args) {
       super(...args);
 
@@ -11,8 +11,8 @@ class Welcome extends Component{
     render() {
       return (
         <div>
-          <Button className="addMore btn" onClick={ ()=> this.setState({ open: !this.state.open })}>
-            Add More Ideas
+          <Button className="dateSelect btn" onClick={ ()=> this.setState({ open: !this.state.open })}>
+            Select End Date
           </Button>
           <Collapse in={this.state.open}>
             <div>
@@ -26,4 +26,4 @@ class Welcome extends Component{
   }
 }
 
-export default Welcome;
+export default DateSelect;
