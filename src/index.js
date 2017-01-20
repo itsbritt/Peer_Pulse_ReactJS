@@ -24,6 +24,8 @@ ReactDOM.render(
       <Route path="/add" component={ AddTopic }/>
       <Route path="/mytopics" component={DisplayTopics} />
       <Route path="/ideas/:id" component={ClickedTopic}  />
+
+
   </Router>,
   document.getElementById('root')
 );
