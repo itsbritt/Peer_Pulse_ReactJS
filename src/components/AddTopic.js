@@ -98,6 +98,7 @@ class AddTopic extends Component {
               placeholder="Add an idea" />
             </form>
 
+          <Welcome>
           <form>
             <input
               className="form-control"
@@ -129,7 +130,7 @@ class AddTopic extends Component {
               ref="idea5"
               placeholder="..." />
             </form>
-
+        </Welcome>
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="save btn btn-primary"
@@ -138,6 +139,7 @@ class AddTopic extends Component {
           </form>
         </Col>
         <Col xs={1}/>
+
         </div>
       </div>
       );

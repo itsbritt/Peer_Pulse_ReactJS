@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router';
-import Background from '../images/logo.png';
+import Background from '../images/newlogo.png';
 import Button from 'muicss/lib/react/button';
 
 
