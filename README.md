@@ -3,7 +3,13 @@ You are planning a day/night out with a person/group of people and the question 
 
 PeerPulse is a solution to that problematic question!
 ####How It Works
-A member of the group creates a question and then shares it with others to get feedback by having others vote for their favorite option.
+A member of the group creates a question with accompanying plan ideas, then shares it with others to get feedback by having others vote for their favorite option.<br />
+Ex: 
+Question: Where should we go for dinner?
+Idea: Italian
+Idea: Japanese
+Idea: Mediterranean
+
 
 ###App Creators
 [Britt Shroyer](https://github.com/brittshroyer)<br />
