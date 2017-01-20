@@ -1,7 +1,8 @@
 ###About
-You are planning a day/night out with a person/group of people and the question arises: "What do you want to do?" And the dreaded response "I dunno, what to you want to do?" arises.
+You are planning a day/night out with a person/group of people and the question arises: "What do you want to do?" and the dreaded response "I dunno, what to you want to do?" arises.
 
 PeerPulse is a solution to that problematic question!
+####How It Works
 A member of the group creates a question and then shares it with others to get feedback by having others vote for their favorite option.
 
 ###Group Members
