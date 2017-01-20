@@ -83,21 +83,64 @@ class AddTopic extends Component {
 <div id="add-margin" className="background">
 <Col xs={1}/>
     <Col xs={10}>
+          <p className="add-topic-info">What's the plan?</p>
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="topicTitle"
+              placeholder="Add an Activity &raquo; ex: Where to eat?" />
+          </form>
 
-      <Form>
-        <legend>Add Topic</legend>
-        <Input className="background" ref="topicTitle" hint="Topic title" />
-        <Input className="background" ref="idea1" hint="Idea" />
-        <Input className="background" ref="idea2" hint="..." />
-        <Input className="background" ref="idea3" hint="..." />
-        <Input className="background" ref="idea4" hint="..." />
-        <Input className="background" ref="idea5" hint="..." />
-        <Button className="centeredContainer" type="submit" value="Save" onSubmit={ this.handleSubmit.bind(this) } variant="raised">Submit</Button>
-      </Form>
-    </Col>
-    <Col xs={1}/>
-</div>
-</div>
+            <p className="add-topic-info">Add some suggestions:</p>
+              <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea1"
+              placeholder="Add a suggestion" />
+            </form>
+
+          <Welcome>
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea2"
+              placeholder="... " />
+            </form>
+
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea3"
+              placeholder="..." />
+            </form>
+
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea4"
+              placeholder="..." />
+            </form>
+
+          <form>
+            <input
+              className="form-control"
+              type="text"
+              ref="idea5"
+              placeholder="..." />
+            </form>
+        </Welcome>
+            <form onSubmit={ this.handleSubmit.bind(this) }>
+            <input
+              className="save btn btn-primary"
+              type="submit"
+              value="Save" />
+          </form>
+        </div>
 
       );
     }
@@ -106,61 +149,4 @@ class AddTopic extends Component {
   export default AddTopic;
 
 
-  {/* <p className="add-topic-info">What's the topic?</p>
-  <form>
-    <input
-      className="form-control"
-      type="text"
-      ref="topicTitle"
-      placeholder="Add an Activity &raquo; ex: Where to eat?" />
-  </form>
-
-    <p className="add-topic-info">Add some ideas:</p>
-      <form>
-    <input
-      className="form-control"
-      type="text"
-      ref="idea1"
-      placeholder="Add an idea" />
-    </form>
-
-  <form>
-    <input
-      className="form-control"
-      type="text"
-      ref="idea2"
-      placeholder="... " />
-    </form>
-
-  <form>
-    <input
-      className="form-control"
-      type="text"
-      ref="idea3"
-      placeholder="..." />
-    </form>
-
-  <form>
-    <input
-      className="form-control"
-      type="text"
-      ref="idea4"
-      placeholder="..." />
-    </form>
-
-  <form>
-    <input
-      className="form-control"
-      type="text"
-      ref="idea5"
-      placeholder="..." />
-    </form>
-
-    <form onSubmit={ this.handleSubmit.bind(this) }>
-    <input
-      className="save btn btn-primary"
-      type="submit"
-      value="Save" />
-  </form>
-</Col>
-<Col xs={1}/> */}
+ 
