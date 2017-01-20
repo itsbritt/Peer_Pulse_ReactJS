@@ -6,6 +6,7 @@ import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
 
+
 import moment from 'moment';
 
 
@@ -58,11 +59,12 @@ class AddTopic extends Component {
     const idea5 = this.refs.idea5.value;
 
     // TAKE FORM DATA AN ADD IT TO AN ARRAY RESPECTIVELY
-    const newArr = [{idea: idea1, votes: 0},
-                    {idea: idea2, votes: 0},
-                    {idea: idea3, votes: 0},
-                    {idea: idea4, votes: 0},
-                    {idea: idea5, votes: 0}
+    const newArr = [
+                    {idea: idea1, votes: 0, key: randKey.generate()},
+                    {idea: idea2, votes: 0, key: randKey.generate()},
+                    {idea: idea3, votes: 0, key: randKey.generate()},
+                    {idea: idea4, votes: 0, key: randKey.generate()},
+                    {idea: idea5, votes: 0, key: randKey.generate()},
                     ]
 
     const validEntry = [];
@@ -137,6 +139,7 @@ class AddTopic extends Component {
               placeholder="Add a suggestion" />
             </form>
 
+          <Welcome>
           <form>
             <input
               className="form-control"
@@ -168,14 +171,13 @@ class AddTopic extends Component {
               ref="idea5"
               placeholder="..." />
             </form>
-
+        </Welcome>
             <form onSubmit={ this.handleSubmit.bind(this) }>
             <input
               className="save btn btn-primary"
               type="submit"
               value="Save" />
           </form>
-
         </div>
       );
     }

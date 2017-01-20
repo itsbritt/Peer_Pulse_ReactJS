@@ -21,7 +21,7 @@ class App extends Component {
           <img src={ Background } alt="background" className="logoImage"/>
           <h1 className="header">PeerPulse</h1>
           <h4>The smarter way to share ideas</h4>
-          <Button className="btn btn-primary" id="landingButton">
+          <Button className="btn btn-primary landingButton">
             <Link to="/home"><h2 className="header">get started</h2></Link>
           </Button>
         </Col>

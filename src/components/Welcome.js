@@ -11,8 +11,8 @@ class Welcome extends Component{
     render() {
       return (
         <div>
-          <Button onClick={ ()=> this.setState({ open: !this.state.open })}>
-            Add Idea
+          <Button className="addMore btn" onClick={ ()=> this.setState({ open: !this.state.open })}>
+            Add More Suggestions
           </Button>
           <Collapse in={this.state.open}>
             <div>
