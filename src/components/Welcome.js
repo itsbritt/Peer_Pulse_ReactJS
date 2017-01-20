@@ -12,7 +12,7 @@ class Welcome extends Component{
       return (
         <div>
           <Button className="addMore btn" onClick={ ()=> this.setState({ open: !this.state.open })}>
-            Add More Suggestions
+            Add More Ideas
           </Button>
           <Collapse in={this.state.open}>
             <div>
