@@ -6,6 +6,10 @@ import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
 import * as randKey from 'random-key';
+import { Col } from 'react-bootstrap';
+import Form from 'muicss/lib/react/form';
+import Input from 'muicss/lib/react/input';
+import Button from 'muicss/lib/react/button';
 
 class AddTopic extends Component {
   constructor(props) {
@@ -71,11 +75,14 @@ class AddTopic extends Component {
     render() {
       console.log( 'key:  : b b   ', randKey.generate() )
       return (
-        <div className="background">
+<div>
+
           <MuiThemeProvider>
             <SimpleMenu />
           </MuiThemeProvider>
-
+<div id="add-margin" className="background">
+<Col xs={1}/>
+    <Col xs={10}>
           <p className="add-topic-info">What's the plan?</p>
           <form>
             <input
@@ -134,8 +141,12 @@ class AddTopic extends Component {
               value="Save" />
           </form>
         </div>
+
       );
     }
   }
 
   export default AddTopic;
+
+
+ 

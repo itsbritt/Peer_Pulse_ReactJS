@@ -88,7 +88,8 @@ class ClickedTopic extends Component {
             <SimpleMenu />
           </MuiThemeProvider>
         </div>
-
+        <Col xs={1}/>
+        <Col xs={10} className="centeredContainer">
         <h1>{ topics }</h1>
         <div className="col-xs-12 ideasContainer">
           <div className="voteContainer">
@@ -98,6 +99,8 @@ class ClickedTopic extends Component {
             { idea }
           </div>
         </div>
+      </Col>
+        <Col xs={1}/>
         </div>
     );
   }

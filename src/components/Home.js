@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import LoginButton from './LoginButton';
-import { Button, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import {firebase} from '../utils/firebase';
 import { Link } from 'react-router';
 import Topics from './Topics';
@@ -10,6 +10,8 @@ import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import UserPhoto from './UserPhoto';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Button from 'muicss/lib/react/button';
+import IconButton from 'material-ui/IconButton';
 
 // import Upvote from 'react-upvote';
 
@@ -57,15 +59,18 @@ class Home extends Component {
         { this.sessionButton() }
         <h1 className="header">{ welcomeMessage }</h1>
         <UserPhoto />
+        <br/>
       </div>
-      <Button className="btn btn-primary newProjectBtn">
-        <Link to="/add"><h2 className="header">new project</h2></Link>
-      </Button>
+<h2 id="noMargin">Your topics:</h2>
       <Scrollbars
       style={{ height: 250 }}>
       <div><Topics /></div>
       </Scrollbars>
-
+      <Link to="/add">
+      <Button className="landingButton" variant="raised">
+        <h2 className="header">add topic</h2>
+      </Button>
+    </Link>
     </Col>
       <Col xs={1}/>
 
