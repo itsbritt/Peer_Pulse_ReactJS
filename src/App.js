@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 import { Col } from 'react-bootstrap';
 import { Link } from 'react-router';
-import Background from '../images/logo.png';
+import Background from '../images/newlogo.png';
 import Button from 'muicss/lib/react/button';
 
 
@@ -19,10 +19,10 @@ class App extends Component {
           <Col xs={1}/>
           <Col xs={10} className="centeredContainer">
           <img src={ Background } alt="background" className="logoImage"/>
-          <h1 className="landingHeader">PeerPulse</h1>
+          <h1 id="landing-header" className="landingHeader">PeerPulse</h1>
           <h3>A smarter way to share ideas</h3>
           <Link to="/home">
-          <Button className="landingButton" variant="raised" color="accent">
+          <Button id="landing-button" className="landingButton" variant="raised" color="accent">
             <h2 className="header">get started</h2>
           </Button>
         </Link>

@@ -14,7 +14,7 @@ a:hover {
 }
 .landingButton {
   text-align: center;
-  margin: 25px 0 25px 0;
+
   padding-bottom: 50px;
   padding-top: 20px;
   background-color: #78909B;
@@ -53,7 +53,7 @@ h2.header{
   margin-top: 50px;
 }
 .logoImage {
-  margin-top: 150px;
+  margin-top: 110px;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -183,6 +183,7 @@ h2.header{
   font-weight: 300;
   text-align: center;
   font-size: 50px;
+  margin-top: 30px;
 }
 .background {
   background-color: white;
@@ -194,9 +195,21 @@ h2.header{
   margin-top: 20px;
 }
 .mui-appbar{
-  background-color: rgba(120, 144, 155, 0.67);
+  background-color: rgba(255, 255, 255, 0.37);
 }
 #noPadding {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+#landing-button{
+  margin-top: 20px;
+}
+.mui-btn--accent{
+  margin-top: 50px;
+}
+#landing-header{
+  margin-botton: 20px;
+}
+.logoImage{
+  margin-botton: 40px;
 }
