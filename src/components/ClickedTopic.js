@@ -109,10 +109,10 @@ console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.tim
             <SimpleMenu />
           </MuiThemeProvider>
         </div>
-
+        <Col xs={1}/>
+        <Col xs={10} className="centeredContainer">
         <h1>{ topics }</h1>
-
-        <h2>Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400) * -1}</h2>
+        <h2 className="deadline">Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400) * -1}</h2>
 
         <div className="col-xs-12 ideasContainer">
 
@@ -126,6 +126,8 @@ console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.tim
 
 
         </div>
+      </Col>
+        <Col xs={1}/>
         </div>
     );
   }

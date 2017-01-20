@@ -9,14 +9,16 @@ a {
   color: #26547C;
 }
 a:hover {
-  color: #E9168C;
+  background-color: #E9168C;
   text-decoration: none;
 }
 .landingButton {
   text-align: center;
   margin: 25px 0 25px 0;
-  padding: 1px 10px;
-  background-color: #26547C;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  background-color: #78909B;
+
 }
 .landingbutton:hover {
   background-color: #011627;
@@ -26,18 +28,23 @@ a:hover {
   margin: 25px 0 25px 0;
   padding: 1px 10px;
   background-color: #26547C;
+  height: 50px;
+  width: 280px;
 }
 .header{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   text-align: center;
 }
 h2.header{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+  font-size: 20px;
   color: white;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  margin: 0;
 }
 .centeredContainer {
   text-align: center;
@@ -61,7 +68,7 @@ h2.header{
   font-size: 24px;
 }
 .topic-title {
-  font-family: 'Rubik',sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #FCFCFC;
   border-radius: 5px;
   color: black;
@@ -70,7 +77,7 @@ h2.header{
   text-align: center;
 }
 .topic-title-header {
-  font-family: 'Rubik',sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 5px;
   color: black;
   font-size: 20px;
@@ -85,11 +92,11 @@ h2.header{
 .ideaName {
   border-radius: 5px;
   clear: right;
-  margin: 20px 0 20px 0;
+  margin: 1px 0 33px 0;
 }
 .idea-title-header {
   background-color: rgba(244,244,244,.6);
-  font-family: 'Rubik',sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 5px;
   color: black;
   font-size: 15px;
@@ -109,7 +116,7 @@ h2.header{
   padding: 3px;
 }
 .add-topic-info {
-  font-family: 'Rubik',sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-align: center;
   padding: 10px;
@@ -117,7 +124,8 @@ h2.header{
 }
 .form-control {
   margin: 8px;
-  max-width: 375px;
+  width: 395px;
+  text-align: center;
 }
 .save {
   margin: 20px 0 0 8px;
@@ -132,7 +140,7 @@ h2.header{
 .voteContainer {
   float: left;
   clear: left;
-  margin: 25px 0 0 25px;
+  margin: 10px 0 10px 0;
 }
 .upVoteIcon {
   font-size: 15px;
@@ -157,6 +165,7 @@ h2.header{
 .signOutColor {
   background-color: #26547C;
 }
+
 .calendar {
   display: flex;
   justify-content: center;
@@ -167,5 +176,44 @@ h2.header{
   width: 200px;
   margin: 0 auto;
   padding-top: 100px;
+}
+.menuButto:hover {
+  background-color: #011627;
+}
+.form-control {
+  width: 270px;
+}
+.centerItems {
+  text-align: center;
+  margin: 0auto;
+}
+#noMargin {
+  margin: 0;
+}
+.landingHeader {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 50px;
+}
+.background {
+  background-color: white;
+}
+.mui-textfield>input, .mui-textfield>textarea {
+  padding-left: 10px;
+}
+#add-margin {
+  margin-top: 20px;
+}
+.mui-appbar{
+  background-color: rgba(120, 144, 155, 0.67);
+}
+#noPadding {
+  padding-top: 0px;
+  padding-bottom: 0px;
 
+}
+.deadline{
+  display: block;
+  padding-top: 30px;
 }

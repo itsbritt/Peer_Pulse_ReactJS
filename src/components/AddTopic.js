@@ -6,14 +6,7 @@ import SimpleMenu from './SimpleMenu';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Welcome from './Welcome';
 import * as randKey from 'random-key';
-
-
 import moment from 'moment';
-
-
-
-
-
 import { render } from 'react-dom';
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css'; // only needs to be imported once
@@ -21,8 +14,6 @@ import 'react-infinite-calendar/styles.css'; // only needs to be imported once
 // Render the Calendar
 var today = new Date();
 var minDate = Number(new Date()) - (24*60*60*1000) * 7;
-
-
 
 class AddTopic extends Component {
 
@@ -34,20 +25,15 @@ class AddTopic extends Component {
     }
   }
   handleSelectDate(date) {
-
     console.log('the selected date is: ', date);
     console.log('unix timestamp:', moment(date).unix());
     this.setState({
       time: moment(date).unix()
-    })
-
-
-
+    });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-
     const topicsRef = firebase.database().ref("topics/");
     const topicTitle = this.refs.topicTitle.value;
     const userid = firebase.auth().currentUser.uid
@@ -88,7 +74,7 @@ class AddTopic extends Component {
       .ref('/topics')
       .push({
         title: topicTitle,
-        time: this.state.time,
+        date: this.state.time,
         idea: newArr,
         userid: userid
       }).then(data => {
@@ -106,7 +92,7 @@ class AddTopic extends Component {
             <SimpleMenu />
           </MuiThemeProvider>
 
-          <p className="add-topic-info">What's the plan?</p>
+          <p className="add-topic-info">Whats the plan?</p>
           <form>
             <input
               className="form-control"
