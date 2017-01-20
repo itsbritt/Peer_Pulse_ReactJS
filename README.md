@@ -5,7 +5,7 @@ PeerPulse is a solution to that problematic question!
 ####How It Works
 A member of the group creates a question and then shares it with others to get feedback by having others vote for their favorite option.
 
-###Group Members
+###App Creators
 [Britt Shroyer](https://github.com/brittshroyer)<br />
 [Stephanie Gage](https://github.com/stephig85)<br />
 [Stephanie Workman](https://github.com/sworkman2014)<br />
