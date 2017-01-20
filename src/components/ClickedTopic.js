@@ -26,7 +26,7 @@ class ClickedTopic extends Component {
     var ideaLocation = '/topics/' + firebaseId + '/idea';
     var topicLocation = '/topics/' + firebaseId;
     var voteLocation = '/topics/' + firebaseId + '/idea';
-    var dateLocation = '/topics/' + firebaseId + '/time';
+    var dateLocation = '/topics/' + firebaseId + '/date';
       let self=this;
       var topicsRef = firebase.database().ref(topicLocation)
       .once("value", function(topicData) {
@@ -74,10 +74,13 @@ class ClickedTopic extends Component {
                   var timeCollection = timedata.val();
           // console.log('ideas are', ideaCollection);
                     self.setState({
-                      time: timeCollection
+                      date: timeCollection
                   });
 
             });
+
+            console.log('UNIX', this.state.date);
+            // <h2>Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - )/86400000)}</h2>
 
 
       }
@@ -86,7 +89,7 @@ class ClickedTopic extends Component {
 
     const topics = this.state.topics.map(topic => {
       return <Title titleObject={ topic } />
-      console.log('topics', topics);
+
     });
     const idea = this.state.idea.map(ideas => {
       return <Idea ideaObject={ ideas.idea } />
@@ -98,7 +101,7 @@ class ClickedTopic extends Component {
     });
 
 
-// <h2>Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400) * -1}</h2>
+
     return (
       <div>
         <div>
@@ -107,6 +110,7 @@ class ClickedTopic extends Component {
           </MuiThemeProvider>
         </div>
         <h1>{ topics }</h1>
+
         <div className="col-xs-12 ideasContainer">
           <div className="voteContainer">
             { votes }

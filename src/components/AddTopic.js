@@ -10,10 +10,6 @@ import * as randKey from 'random-key';
 
 import moment from 'moment';
 
-
-
-
-
 import { render } from 'react-dom';
 import InfiniteCalendar from 'react-infinite-calendar';
 import 'react-infinite-calendar/styles.css'; // only needs to be imported once
@@ -106,7 +102,7 @@ class AddTopic extends Component {
             <SimpleMenu />
           </MuiThemeProvider>
 
-          <p className="add-topic-info">What's the plan?</p>
+          <p className="add-topic-info">Whats the plan?</p>
           <form>
             <input
               className="form-control"
