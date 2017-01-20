@@ -78,7 +78,7 @@ class AddTopic extends Component {
       .ref('/topics')
       .push({
         title: topicTitle,
-        date: this.state.time,
+        time: this.state.time,
         idea: newArr,
         userid: userid
       }).then(data => {
@@ -109,8 +109,9 @@ class AddTopic extends Component {
     </form>
 
     <p className="add-topic-info">Decision Deadline</p>
+
     <div className='calendar'>
-    <InfiniteCalendar>
+    <InfiniteCalendar
       width={325}
       height={250}
       onSelect={this.handleSelectDate.bind(this)}
@@ -118,7 +119,7 @@ class AddTopic extends Component {
       disabledDays={[0,6]}
       minDate={minDate}
       keyboardSupport={true}
-    </InfiniteCalendar>
+        />
     </div>
 
 
