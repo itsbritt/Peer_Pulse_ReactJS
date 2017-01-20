@@ -132,8 +132,8 @@ h2.header{
   background-color: #26547C;
 }
 .addMore{
-  margin: 0 0 0 8px;
-  background-color: rgba(255,240,216,0.8);
+  margin: 0 0 5px 8px;
+  background-color: rgba(255, 255, 255, 0.37);
   font-size: 12px;
   color: black;
 }
@@ -169,7 +169,9 @@ h2.header{
   background-color: #011627;
 }
 .form-control {
-  width: 270px;
+  width: 100%;
+
+  margin-left: 0;
 }
 .centerItems {
   text-align: center;
@@ -202,7 +204,7 @@ h2.header{
   padding-bottom: 0px;
 }
 #landing-button{
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .mui-btn--accent{
   margin-top: 50px;
@@ -211,5 +213,8 @@ h2.header{
   margin-botton: 20px;
 }
 .logoImage{
-  margin-botton: 40px;
+  margin-botton: 50px;
+}
+.well {
+  margin-bottom: 0;
 }

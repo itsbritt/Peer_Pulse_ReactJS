@@ -81,6 +81,7 @@ class AddTopic extends Component {
                   <div className="centerItems">
     <Col xs={1}/>
     <Col xs={10}>
+      <div className="centeredContainer">
           <p className="add-topic-info">What's the topic?</p>
 
           <form>
@@ -99,7 +100,7 @@ class AddTopic extends Component {
               ref="idea1"
               placeholder="Add an idea" />
             </form>
-
+</div>
           <Welcome>
           <form>
             <input
@@ -139,6 +140,7 @@ class AddTopic extends Component {
               type="submit"
               value="Save" />
           </form>
+
         </Col>
         <Col xs={1}/>
 
