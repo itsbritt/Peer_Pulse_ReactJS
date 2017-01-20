@@ -37,17 +37,16 @@ class Home extends Component {
 //if someone is not logged in, show login..if not show logout button and name of person,
   sessionButton() {
     if (!firebase.auth().currentUser) {
-      return <LoginButton>Log in with GitHub</LoginButton>;
+      return <LoginButton id="loginButton">Log in with GitHub</LoginButton>;
     }
   }
 
-  render() {
+  loggedIn(){
     const welcomeMessage = (firebase.auth().currentUser) ?
        `Hi ${this.state.user.displayName}!` :
       '';
-
-    return (
-      <div>
+    if (firebase.auth().currentUser){
+      return<div>
       <div>
       <MuiThemeProvider>
         <SimpleMenu />
@@ -74,8 +73,21 @@ class Home extends Component {
     </Col>
       <Col xs={1}/>
 
-    </div>
+    </div>;
 
+    } else {
+      return <LoginButton>Log in with GitHub</LoginButton>;
+    }
+
+    }
+
+  render() {
+
+
+    return (
+      <div>
+      { this.loggedIn() }
+</div>
     );
   }
 }

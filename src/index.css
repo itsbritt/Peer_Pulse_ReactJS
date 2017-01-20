@@ -218,3 +218,14 @@ h2.header{
 .well {
   margin-bottom: 0;
 }
+#loginButton {
+  margin: 100px, 100px, 100px, 100px;
+  color: 'white';
+}
+.saveButton {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 0;
+  background-color: #78909B;
+  color: #ffffff;
+}
