@@ -84,13 +84,9 @@ class ClickedTopic extends Component {
 
   render() {
 
-// console.log('time!', this.state.time);
-// console.log('now:', Math.floor(Date.now() / 1000));
-// const loggedTime = this.state.time;
-// const currentTime = Math.floor(Date.now() / 1000);
-// console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400));
     const topics = this.state.topics.map(topic => {
       return <Title titleObject={ topic } />
+      console.log('topics', topics);
     });
     const idea = this.state.idea.map(ideas => {
       return <Idea ideaObject={ ideas.idea } />
@@ -110,24 +106,19 @@ class ClickedTopic extends Component {
             <SimpleMenu />
           </MuiThemeProvider>
         </div>
-
         <h1>{ topics }</h1>
-
         <div className="col-xs-12 ideasContainer">
-
           <div className="voteContainer">
             { votes }
           </div>
           <div className="ideaName">
             { idea }
           </div>
-
         </div>
         </div>
+    );
 
-);
-
-}
+  }
 }
 
 
