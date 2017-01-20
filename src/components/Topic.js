@@ -12,6 +12,7 @@ class Topic extends Component {
   }
 
   handleUpClick() {
+    console.log(this.props.key);
     this.setState({
       voteCount: this.state.voteCount++
     })

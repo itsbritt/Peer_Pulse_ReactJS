@@ -38,7 +38,6 @@ class Topics extends Component {
 
 
 
-
   render() {
     const topics = this.state.topics.map(topic => {
       return <Topic keyObject={ topic.uniqueKey } titleObject={ topic } />

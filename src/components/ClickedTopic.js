@@ -75,19 +75,20 @@ class ClickedTopic extends Component {
           // console.log('ideas are', ideaCollection);
                     self.setState({
                       time: timeCollection
+                  });
 
-                    });
-                    // console.log('ideas are', self.state.idea);
-                  // }
             });
+
+
       }
 
   render() {
-console.log('time!', this.state.time);
-console.log('now:', Math.floor(Date.now() / 1000));
-const loggedTime = this.state.time;
-const currentTime = Math.floor(Date.now() / 1000);
-console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400));
+
+// console.log('time!', this.state.time);
+// console.log('now:', Math.floor(Date.now() / 1000));
+// const loggedTime = this.state.time;
+// const currentTime = Math.floor(Date.now() / 1000);
+// console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400));
     const topics = this.state.topics.map(topic => {
       return <Title titleObject={ topic } />
     });
@@ -101,7 +102,7 @@ console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.tim
     });
 
 
-
+// <h2>Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400) * -1}</h2>
     return (
       <div>
         <div>
@@ -112,8 +113,6 @@ console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.tim
 
         <h1>{ topics }</h1>
 
-        <h2>Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400) * -1}</h2>
-
         <div className="col-xs-12 ideasContainer">
 
           <div className="voteContainer">
@@ -123,12 +122,13 @@ console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.tim
             { idea }
           </div>
 
-
-
         </div>
         </div>
-    );
-  }
+
+);
+
 }
+}
+
 
 export default ClickedTopic;

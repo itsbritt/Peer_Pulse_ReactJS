@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { firebase } from '../utils/firebase';
 import Idea from './Idea';
+import Topic from './Topic';
+
 
 // import NavLink from './NavLink';
 
@@ -22,6 +24,7 @@ class Ideas extends Component {
 
         topicsRef.orderByChild("userid").equalTo(userData.uid).once("value", function(data) {
               // const topicData = firebaseListToArray(data.val().userid);
+
               // console.log("Equal to filter: ", data.val());
 
               var topicCollection = data.val();
@@ -33,6 +36,19 @@ class Ideas extends Component {
                   topics: self.state.topics.concat(topicCollection[key])
                 });
 // console.log('state is', self.state.topics);
+
+              console.log("Equal to filter: ", data.val());
+
+              var topicCollection = data.val();
+
+              for(let key in topicCollection){
+                topicCollection[key].uniqueKey = key;
+                console.log('key: ',topicCollection[key].uniqueKey);
+                self.setState({
+                  topics: self.state.topics.concat(topicCollection[key])
+                });
+
+>>>>>>> abaaa71e01baee7ab28a91294737ef0076ff17af
               }
         });
       })
@@ -44,6 +60,12 @@ class Ideas extends Component {
     const topics = this.state.topics.map(topic => {
 // console.log('topic is', topic);
       return <Idea keyObject={ this.props.children } ideaObject={ topic } />
+
+
+    const topics = this.state.topics.map(topic => {
+      console.log('hey',topic.title);
+      return <Topic key={ topic.uniqueKey } titleObject={ topic } />
+
     })
 
     return (
