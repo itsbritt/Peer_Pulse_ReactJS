@@ -36,13 +36,7 @@ class Topics extends Component {
       })
     }
 
-  // handleRedirect() {
-  //   window.location = '/#/ideas';
-  // }
-  // <button onClick={this.handleRedirect.bind(this)}>Edit</button>
 
-
-  // I need to pass in a prop that houses the ideas ideas={topic.idea}
 
 
   render() {

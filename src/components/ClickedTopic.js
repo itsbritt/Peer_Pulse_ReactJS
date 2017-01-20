@@ -26,6 +26,7 @@ class ClickedTopic extends Component {
     var ideaLocation = '/topics/' + firebaseId + '/idea';
     var topicLocation = '/topics/' + firebaseId;
     var voteLocation = '/topics/' + firebaseId + '/idea';
+    var dateLocation = '/topics/' + firebaseId + '/time';
       let self=this;
       var topicsRef = firebase.database().ref(topicLocation)
       .once("value", function(topicData) {
@@ -66,10 +67,27 @@ class ClickedTopic extends Component {
                   // }
             });
 // console.log("the idea is", topicsRef);
+          var timeRef = firebase.database().ref(dateLocation)
+          .once("value", function(timedata) {
+
+
+                  var timeCollection = timedata.val();
+          // console.log('ideas are', ideaCollection);
+                    self.setState({
+                      time: timeCollection
+
+                    });
+                    // console.log('ideas are', self.state.idea);
+                  // }
+            });
       }
 
   render() {
-
+console.log('time!', this.state.time);
+console.log('now:', Math.floor(Date.now() / 1000));
+const loggedTime = this.state.time;
+const currentTime = Math.floor(Date.now() / 1000);
+console.log('BINGO:', Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400));
     const topics = this.state.topics.map(topic => {
       return <Title titleObject={ topic } />
     });
@@ -79,7 +97,10 @@ class ClickedTopic extends Component {
     const votes = this.state.idea.map(ideas => {
       // console.log('votes are', ideas);
       return <Votes ideaKey={ideas.key} topicKey={ this.props.params.id } voteObject={ ideas.votes } />
+
     });
+
+
 
     return (
       <div>
@@ -91,13 +112,19 @@ class ClickedTopic extends Component {
         <Col xs={1}/>
         <Col xs={10} className="centeredContainer">
         <h1>{ topics }</h1>
+        <h2 className="deadline">Days Left to Vote: {Math.round((Math.floor(Date.now() / 1000) - this.state.time) / 86400) * -1}</h2>
+
         <div className="col-xs-12 ideasContainer">
+
           <div className="voteContainer">
             { votes }
           </div>
           <div className="ideaName">
             { idea }
           </div>
+
+
+
         </div>
       </Col>
         <Col xs={1}/>
