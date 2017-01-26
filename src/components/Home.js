@@ -47,47 +47,44 @@ class Home extends Component {
       '';
     if (firebase.auth().currentUser){
       return<div>
-      <div>
-      <MuiThemeProvider>
-        <SimpleMenu />
-      </MuiThemeProvider>
-      </div>
-      <Col xs={1}/>
-      <Col xs={10} className="centeredContainer">
-      <div>
-        { this.sessionButton() }
-        <h1 className="header">{ welcomeMessage }</h1>
-        <UserPhoto />
-        <br/>
-      </div>
-<h2 id="noMargin">Your topics:</h2>
-      <Scrollbars
-      style={{ height: 250 }}>
-      <div><Topics /></div>
-      </Scrollbars>
-      <Link to="/add">
-      <Button className="landingButton" variant="raised">
-        <h2 className="header">add topic</h2>
-      </Button>
-    </Link>
-    </Col>
-      <Col xs={1}/>
+        <div>
+          <MuiThemeProvider>
+            <SimpleMenu />
+            </MuiThemeProvider>
+          </div>
+        <Col xs={1}/>
+        <Col xs={10} className="centeredContainer">
+        <div>
+          { this.sessionButton() }
+          <h1 className="header">{ welcomeMessage }</h1>
+          <UserPhoto />
+          <br/>
+        </div>
+        <h2 id="noMargin">Your topics:</h2>
+        <Scrollbars
+          style={{ height: 250 }}>
+          <div><Topics /></div>
+        </Scrollbars>
+        <Link to="/add">
+        <Button className="landingButton" variant="raised" color="accent">
+          <h2 className="header">add topic</h2>
+        </Button>
+        </Link>
+        </Col>
+        <Col xs={1}/>
 
-    </div>;
+    </div>
 
     } else {
       return <LoginButton>Log in with GitHub</LoginButton>;
-    }
-
+      }
     }
 
   render() {
-
-
     return (
       <div>
-      { this.loggedIn() }
-</div>
+        { this.loggedIn() }
+      </div>
     );
   }
 }

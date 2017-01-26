@@ -14,5 +14,8 @@ build
 .env
 npm-debug.log
 AddTopicSG.js
+junk.js
+.firebaserc
+firebase.json
 
 README.md

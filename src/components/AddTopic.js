@@ -100,10 +100,10 @@ class AddTopic extends Component {
       <SimpleMenu />
     </MuiThemeProvider>
 
-      <div className="centerItems">
-  <Col xs={1}/>
-  <Col xs={10}>
-    <p className="add-topic-info">What's the Topic?</p>
+    <div className="centerItems">
+      <Col xs={1} md={4} lg={4}/>
+      <Col xs={10} md={4} lg={4}>
+      <p className="add-topic-info">What's the Topic?</p>
 
     <form>
       <input
@@ -172,11 +172,11 @@ class AddTopic extends Component {
               placeholder="..." />
             </form>
         </Welcome>
-          <Button className="saveButton" onClick={ this.handleSubmit.bind(this) }>
+          <Button className="saveButton" variant="raised" color="accent"
+            onClick={ this.handleSubmit.bind(this) }>
             <form>
             <input
-              type="submit"
-              value="Save" />
+              type="submit" />
           </form>
           </Button>
         </Col>

@@ -9,12 +9,11 @@ a {
   color: #26547C;
 }
 a:hover {
-  background-color: #E9168C;
+  color: #E9168C;
   text-decoration: none;
 }
 .landingButton {
   text-align: center;
-
   padding-bottom: 50px;
   padding-top: 20px;
   background-color: #78909B;
@@ -25,7 +24,7 @@ a:hover {
 }
 .newProjectBtn {
   text-align: center;
-  margin: 25px 0 25px 0;
+  margin: 30px 0 25px 0;
   padding: 1px 10px;
   background-color: #26547C;
   height: 50px;
@@ -73,7 +72,7 @@ h2.header{
   border-radius: 5px;
   color: black;
   font-size: 17px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 .topic-title-header {
@@ -81,18 +80,18 @@ h2.header{
   border-radius: 5px;
   color: black;
   font-size: 20px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
-#topicsDiv {
+.topicsDiv {
   background-color: rgba(244,244,244,.6);
-  margin-top: 10px;
+  margin-top: 20px;
   border-radius: 5px;
  }
 .ideaName {
   border-radius: 5px;
   clear: right;
-  margin: 1px 0 33px 0;
+  margin: 1px 0 50px 0;
 }
 .idea-title-header {
   background-color: rgba(244,244,244,.6);
@@ -149,24 +148,24 @@ h2.header{
   margin: 10px 0 10px 0;
 }
 .upVoteIcon {
-  font-size: 15px;
+  font-size: 20px;
   margin: 2px;
 }
 .upVoteIcon:hover {
-  font-size: 15px;
+  font-size: 20px;
   margin: 2px;
   color: #3E88FB;
 }
 .downVoteIcon {
-  font-size: 15px;
+  font-size: 20px;
   margin: 2px;
 }
 .downVoteIcon:hover {
   color: #F67445;
 }
 .upVoteText {
-  font-size: 15px;
-  margin: -8px 0 -8px 5px;
+  font-size: 16px;
+  margin: -8px 0 -5px 5px;
 }
 .signOutColor {
   background-color: #26547C;
@@ -193,7 +192,6 @@ h2.header{
   font-size: 50px;
   margin-top: 30px;
 }
-
 .mui-textfield>input, .mui-textfield>textarea {
   padding-left: 10px;
 }
@@ -222,7 +220,6 @@ h2.header{
 .well {
   margin-bottom: 0;
 }
-
 .deadline{
   font-size: 15px;
   color: #26547c;
@@ -234,6 +231,7 @@ h2.header{
 .saveButton {
   text-align: center;
   padding-bottom: 20px;
+  margin-bottom: 50px;
   padding-top: 0;
   background-color: #78909B;
   color: #ffffff;
